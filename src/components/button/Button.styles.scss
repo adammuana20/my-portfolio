@@ -1,0 +1,23 @@
+.common-props {
+    filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.15));
+    border: none;
+    padding-block: .7rem;
+    padding-inline: 1.2rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    transition: all .2s;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    color: var(--white);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    &:hover {
+        transform: scale(1);
+        transform: translateY(-.5rem)
+    }
+}

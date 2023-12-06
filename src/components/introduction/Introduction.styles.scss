@@ -1,0 +1,123 @@
+@import '../../global.styles.scss';
+
+@keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 55%;
+
+  img {
+    width: 75%;
+  }
+
+  .overlay-text {
+    position: absolute;
+  }
+}
+
+.color-changing-container span {
+  transition: color 0.5s;
+  display: inline-block;
+  color: white; /* Initial color */
+
+  &:nth-child(4),
+  &:nth-child(9),
+  &:nth-child(10) {
+    margin-right: 10px;
+  }
+}
+
+.color-changing-container span.change {
+  color: red; /* Target color */
+}
+
+.text {
+  padding-bottom: 2.5rem;
+
+  .name {
+    line-height: .8;
+  }
+}
+
+.avatar-container {
+  position: relative;
+  width: 45%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -70px;
+
+  .rotating-img-container {
+    position: absolute;
+    width: 95%;
+    z-index: 1;
+  }
+
+  .avatar {
+    width: 55%;
+    position: absolute;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+}
+
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.rotating {
+  display: inline-block;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
