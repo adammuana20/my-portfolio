@@ -6,8 +6,10 @@ import avatar from '../../assets/images/avatar.png'
 import avatarContainer from '../../assets/images/avatar-container.png'
 
 import './Introduction.styles.scss'
+import { useSectionInView } from "../../library/hooks"
 
 const Introduction = () => {
+  const { ref } = useSectionInView('Home')
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -30,7 +32,7 @@ const Introduction = () => {
   }, [currentIndex]);
   
   return (
-    <section className='home-container' id='home'>
+    <section className='home-container' id='home' ref={ref}>
       <div className="information">
         <img src={infoBox} alt='banner' />
         <div className="overlay-text">

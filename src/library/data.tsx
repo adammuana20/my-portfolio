@@ -18,9 +18,9 @@ import { FiGithub, FiLink, FiLinkedin } from "react-icons/fi";
 
 export const navLinks = [
     { title: "Home", hash: "#home", icon: GoHome },
+    { title: "About Me", hash: "#about-me", icon: CiUser },
     { title: "Skills", hash: "#skills", icon: HiOutlineWrenchScrewdriver },
     { title: "Projects", hash: "#projects", icon: AiOutlineFundProjectionScreen },
-    { title: "About Me", hash: "#about-me", icon: CiUser },
     { title: "Contact", hash: "#contact", icon: CiMail },
 ] as const;
 

@@ -1,11 +1,14 @@
 import titleBox from '../../assets/images/section-title.png'
 import skillBox from '../../assets/images/skills-box.png'
+import { useSectionInView } from '../../library/hooks'
 
 import './Skills.styles.scss'
 
 const Skills = () => {
+  const { ref } = useSectionInView('Skills')
+
   return (
-    <section className='skills-container' id='skills'>
+    <section className='skills-container' id='skills' ref={ref}>
     <div className="section-title-container">
       <img src={titleBox} alt='Title' />
       <h2>TECH STACK/SKILLS</h2>

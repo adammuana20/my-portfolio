@@ -5,8 +5,10 @@
 .navlinks-container {
     display: flex;
     justify-content: center;
-    gap: 2.25rem;
+    gap: 2.5rem;
     padding: 1rem;
+    top: 0;
+    height: 55px;
 }
 
 .link {
@@ -32,4 +34,20 @@
 .hovered {
     transition: all .2s ease-in-out;
     opacity: 1;
+}
+
+.sticky {
+    position: sticky;
+    top: 2rem;
+    z-index: 50;
+    margin: 0 auto;
+    width: max-content;
+    padding-block: .6rem;
+    padding-inline: 2.5rem;
+    transition: all 100ms ease-in-out;
+    border-radius: 9999px;
+    border: none;
+    background-color: rgba(59, 101, 145, .7);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(0.5rem);
 }
