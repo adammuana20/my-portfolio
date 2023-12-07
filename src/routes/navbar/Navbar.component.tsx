@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
 import { navLinks } from '../../library/data'
 
@@ -14,8 +14,44 @@ type CustomNavLinkProps = {
 }
 
 const Navbar = () => {
+  const [isSticky, setIsSticky] = useState(false)
+  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
 
-  const { activeSection, setActiveSection } = useActiveSectionContext()
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const threshold = window.outerHeight * 0.1;
+      setIsSticky(scrollY >= threshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);  
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1024) {
+        setIsMobileMenuActive(true);
+        setIsSticky(false);
+      } else {
+        setIsMobileMenuActive(false);
+        setIsSticky(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
 
   const CustomNavLink: FC<CustomNavLinkProps> = ({ link, children, linkTitle }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -46,7 +82,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className='navlinks-container'>
+    <nav className={`navlinks-container ${isSticky && !isMobileMenuActive ? 'sticky' : ''}`}>
       <ScrollToAnchor />
       { navLinks.map((link, idx) => {
           return(
@@ -62,7 +98,10 @@ const Navbar = () => {
                     <span className='right-bracket'>&#125;</span>
                   </>
                 ) : (
-                  <div onClick={() => setActiveSection(link.title)}>
+                  <div onClick={() => {
+                      setActiveSection(link.title)
+                      setTimeOfLastClick(Date.now())
+                    }}>
                     {link.title}
                   </div>
                 )
@@ -71,7 +110,7 @@ const Navbar = () => {
           )
         })
       }
-    </div>
+    </nav>
   )
 }
 

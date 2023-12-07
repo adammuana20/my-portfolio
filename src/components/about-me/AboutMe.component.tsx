@@ -1,11 +1,14 @@
+import { useSectionInView } from '../../library/hooks';
+
 import titleBox from '../../assets/images/section-title.png'
 import infoBox from '../../assets/images/info-box.png'
 
 import './AboutMe.styles.scss'
 
 const AboutMe = () => {
+  const { ref } = useSectionInView("About Me");
   return (
-    <section className='about-me-container' id='about-me'>
+    <section className='about-me-container' id='about-me' ref={ref}>
       <div className="section-title-container">
         <img src={titleBox} alt='Title' />
         <h2>ABOUT ME</h2>

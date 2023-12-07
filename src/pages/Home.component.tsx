@@ -4,6 +4,7 @@ import Introduction from "../components/introduction/Introduction.component"
 import Skills from "../components/skills/Skills.component"
 import { ScrollProgress } from "../components/scroll-progress/ScrollProgress.component"
 import Projects from "../components/projects/Projects.component"
+import Contact from "../components/contact/Contact.component"
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
         <AboutMe />
         <Skills />
         <Projects />
+        <Contact />
       </main>
     </Layout>
   )

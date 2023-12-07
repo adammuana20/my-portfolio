@@ -22,6 +22,10 @@ $font-semi-bold: "poppins-semibold";
   --rt-opacity: 1;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
