@@ -13,24 +13,6 @@
     }
 }
 
-.section-title-container {
-    width: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-block: 4rem;
-
-    img {
-        width: 55%;
-        animation: blink 1s infinite;
-    }
-
-    h2 {
-        position: absolute;
-    }
-}
-
 .about-content {
     width: 60%;
     margin: 0 auto;

@@ -32,7 +32,7 @@ const Introduction = () => {
   }, [currentIndex]);
   
   return (
-    <section className='home-container' id='home' ref={ref}>
+    <section className='introduction-container' id='home' ref={ref}>
       <div className="information">
         <img src={infoBox} alt='banner' />
         <div className="overlay-text">

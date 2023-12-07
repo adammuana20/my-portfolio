@@ -11,7 +11,7 @@ const Skills = () => {
     <section className='skills-container' id='skills' ref={ref}>
     <div className="section-title-container">
       <img src={titleBox} alt='Title' />
-      <h2>TECH STACK/SKILLS</h2>
+      <h2>SKILLS</h2>
     </div>
     <div className="skills-content">
       <img src={skillBox} alt='banner' />
