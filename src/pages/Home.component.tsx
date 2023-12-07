@@ -10,13 +10,13 @@ import Contact from "../components/contact/Contact.component"
 const Home = () => {
   return (
     <Layout>
-      <header className="header-container">
+      <header>
         <ScrollProgress
           position={"left"}
           color={"#78CCE2"}
           height={10}
           smoothness={true}
-        />
+        />  
         <Introduction />
       </header>
       <main>

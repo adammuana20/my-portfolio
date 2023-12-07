@@ -39,6 +39,7 @@ body {
   background: url('./assets/images/bg.png') center/cover no-repeat;
   background-attachment: fixed;
   color: $color-white;
+  overflow-x: hidden;
 }
 
 /* FONT IMPORTS */
@@ -102,4 +103,31 @@ img {
 
 .secondary-btn:hover {
   background-color: var(--black);
+}
+
+.section-title-container {
+  position: relative;
+  width: 30rem;
+  margin-bottom: 3rem;
+
+  img {
+    animation: blink 1s infinite;
+  }
+
+  h2 {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.about-me-container,
+.skills-container,
+.projects-container,
+.contact-container {
+  padding-top: 6rem;
+  padding-left: 1rem;
+  max-width: 1500px;
+  margin: 0 auto;
 }
