@@ -1,18 +1,28 @@
 @import url('../../global.styles.scss');
 
 .skills-container {
-    height: 100vh;
+    min-height: 60rem;
 }
 
-.skills-content {
-    width: 60%;
-    margin: 0 auto;
-    position: relative;
+.skills-contents {
     display: flex;
-    align-items: center;
+    gap: 6rem;
+    padding-inline: 3.5rem;
+}
+
+.web-dev-skills {
+    width: 50%;
+    margin: 0 auto; 
 
     p {
         position: absolute;
         padding: 10rem;
     }
+}
+
+.design-cms-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

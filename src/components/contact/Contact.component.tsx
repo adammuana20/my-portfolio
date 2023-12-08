@@ -1,5 +1,6 @@
 import { useState, FormEvent, ChangeEvent, useEffect } from 'react'
 import { Highlight, themes } from "prism-react-renderer";
+import { CiMail } from "react-icons/ci";
 
 import FormInput from '../form-input/FormInput.component';
 import { useSectionInView } from '../../library/hooks'
@@ -7,6 +8,7 @@ import { useSectionInView } from '../../library/hooks'
 import titleBox from '../../assets/images/section-title.png'
 
 import './Contact.styles.scss'
+import Button from '../button/Button.component';
 
 const defaultFormFields = {
     name: '',
@@ -176,10 +178,20 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                             onChange:handleChange,
                             onFocus:() => setLastUpdatedField('message'),
                             onMouseEnter:() => setLastUpdatedField('message'),
-                            maxLength: 400,
+                            maxLength: 500,
                             required:true,
                         }}
                     />
+                    <div className='form-btn'>
+                    <Button
+                        value={`Send`}
+                        iconSVG={CiMail}
+                        buttoncolor={'main-btn'}
+                        iconcolor={`#fff`}
+                        type="submit"
+                        elementType="input"
+                    />
+                    </div>
                 </form>
             </div>
         </section>

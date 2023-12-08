@@ -1,5 +1,9 @@
 import titleBox from '../../assets/images/section-title.png'
-import skillBox from '../../assets/images/skills-box.png'
+import { Tooltip as ReactTooltip } from "react-tooltip";
+
+import SkillsItem from '../skills-item/SkillsItem.component'
+
+import { skillsDataCMS, skillsDataDesign, skillsDataWeb } from '../../library/data'
 import { useSectionInView } from '../../library/hooks'
 
 import './Skills.styles.scss'
@@ -13,10 +17,28 @@ const Skills = () => {
       <img src={titleBox} alt='Title' />
       <h2>SKILLS</h2>
     </div>
-    <div className="skills-content">
-      <img src={skillBox} alt='banner' />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque eius, ducimus a voluptate illo assumenda similique, inventore modi harum repellat optio officiis nesciunt. Voluptate, provident minus. Tempora, tempore ducimus!</p>
+    <div className='skills-contents'>
+      <div className="web-dev-skills">
+        <SkillsItem skillsData={skillsDataWeb} />
+      </div>
+      <div className="design-cms-container">
+        <div className="design-skills">
+          <SkillsItem skillsData={skillsDataDesign} />
+        </div>
+        <div className="cms-skills">
+          <SkillsItem skillsData={skillsDataCMS} />
+        </div>
+      </div>
     </div>
+    <ReactTooltip
+        id="my-tooltip"
+        style={{
+            fontSize: "1.1rem",
+            backgroundColor: "var(--semidarkblue)",
+            zIndex: '10',
+        }}
+        opacity={1}
+    />
   </section>
   )
 }

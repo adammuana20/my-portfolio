@@ -68,12 +68,12 @@ a {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 2.8vw, 4rem);
   font-family: $font-bold;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 2vw, 3rem);
   font-family: $font-semi-bold;
 }
 
@@ -130,4 +130,22 @@ img {
   padding-left: 1rem;
   max-width: 1500px;
   margin: 0 auto;
+}
+
+.introduction-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: var(--blackblue);
+  margin-top: 3rem;
+}
+
+article {
+  color: var(--black);
+
+  .title {
+    font-family: $font-bold;
+  }
 }

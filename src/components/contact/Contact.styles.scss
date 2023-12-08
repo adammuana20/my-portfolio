@@ -1,11 +1,12 @@
 .contact-container {
-    height: 100vh;
+    min-height: 60rem;
 }
 
 .contact-details {
     display: flex;
     justify-content: space-between;
     padding-left: 3rem;
+    align-items: start;
 }
 
 form {
@@ -19,7 +20,7 @@ form {
     border: 3px solid var(--semidarkblue);
     border-radius: 1rem;
     background-color: rgb(1, 22, 39);
-    padding: 1rem 3rem;
+    padding: 1.5rem 3rem;
 
     &:hover {
         border-color: var(--lightblue);
@@ -29,6 +30,10 @@ form {
     .pre-content {
         font-size: 1.4rem;
         line-height: 1.7rem;
-        height: 100%;
     }
+}
+
+.form-btn {
+    width: 30%;
+    margin: 0 auto;
 }

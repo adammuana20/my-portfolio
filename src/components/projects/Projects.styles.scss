@@ -1,13 +1,23 @@
 .projects-container {
-    height: 100vh;
+    min-height: 60rem;
+    overflow-x: hidden;
 }
 
 .swiper {
     width: 80%;
 }
 
+.img-overlay {
+    position: absolute;
+    background: url('../../assets/images/projects-overlay.png') top left/100% 100% no-repeat;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 .slider {
-    background-color: var(--darkblue);
+    background-color: var(--blackblue);
     display: flex;
     flex-direction: row;
     justify-content: space-between;

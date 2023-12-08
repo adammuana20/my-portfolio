@@ -43,17 +43,11 @@ const Introduction = () => {
               <span className={currentIndex === 1 ? 'change' : ''}>d</span>
               <span className={currentIndex === 2 ? 'change' : ''}>a</span>
               <span className={currentIndex === 3 ? 'change' : ''}>m</span>
-              <span className={currentIndex === 4 ? 'change' : ''}>C</span>
-              <span className={currentIndex === 5 ? 'change' : ''}>l</span>
-              <span className={currentIndex === 6 ? 'change' : ''}>i</span>
-              <span className={currentIndex === 7 ? 'change' : ''}>n</span>
-              <span className={currentIndex === 8 ? 'change' : ''}>t</span>
-              <span className={currentIndex === 9 ? 'change' : ''}>P.</span>
-              <span className={currentIndex === 10 ? 'change' : ''}>M</span>
-              <span className={currentIndex === 11 ? 'change' : ''}>u</span>
-              <span className={currentIndex === 12 ? 'change' : ''}>a</span>
-              <span className={currentIndex === 13 ? 'change' : ''}>ñ</span>
-              <span className={currentIndex === 14 ? 'change' : ''}>a</span>
+              <span className={currentIndex === 4 ? 'change' : ''}>M</span>
+              <span className={currentIndex === 5 ? 'change' : ''}>u</span>
+              <span className={currentIndex === 6 ? 'change' : ''}>a</span>
+              <span className={currentIndex === 7 ? 'change' : ''}>ñ</span>
+              <span className={currentIndex === 8 ? 'change' : ''}>a</span>
               <span className="wave">👋</span>
             </h1>
           </div>
@@ -66,17 +60,17 @@ const Introduction = () => {
             ]}
             wrapper="div"
             speed={50}
-            style={{ fontSize: '2rem', display: 'block', textAlign: 'center', }}
+            style={{ fontSize: 'clamp(2rem, 2vw, 3rem)', display: 'block', textAlign: 'center', }}
             repeat={Infinity}
           />
         </div>
       </div>
       <div className="avatar-container">
-        <div className="rotating-img-container">
-          <img src={avatarContainer} alt='Sample' className="rotating" />
-        </div>
         <div className="avatar">
           <img src={avatar} alt='Avatar' />
+        </div>
+        <div className="rotating-img-container">
+          <img src={avatarContainer} alt='Sample' className="rotating" />
         </div>
       </div>
     </section>

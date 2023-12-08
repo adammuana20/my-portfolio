@@ -82,7 +82,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={`navlinks-container ${isSticky && !isMobileMenuActive ? 'sticky' : ''}`}>
+    <nav className={`navlinks-container ${isSticky ? 'sticky' : ''}`}>
       <ScrollToAnchor />
       { navLinks.map((link, idx) => {
           return(
