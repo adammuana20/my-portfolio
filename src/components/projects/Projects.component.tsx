@@ -41,6 +41,7 @@ const Projects = () => {
                 >
                     { projectsData.map((project, idx) => (
                         <SwiperSlide key={idx} className='slider'>
+                            {/* <div className='img-overlay'></div> */}
                             <div className='slider-content'>
                                 <h2>{project.title}</h2>
                                 <p>{project.description}</p>
@@ -53,7 +54,7 @@ const Projects = () => {
                                                     src={technology.icon}
                                                     alt={`${project.title}-icon`}
                                                     className="icon"
-                                                    data-tooltip-id="my-tooltip"
+                                                    data-tooltip-id="my-tooltips"
                                                     data-tooltip-content={technology.name}
                                                 />
                                             ))
@@ -91,7 +92,7 @@ const Projects = () => {
                 </Swiper>
             </section>
             <ReactTooltip
-                id="my-tooltip"
+                id="my-tooltips"
                 style={{
                     fontSize: "1.1rem",
                     backgroundColor: "var(--semidarkblue)",

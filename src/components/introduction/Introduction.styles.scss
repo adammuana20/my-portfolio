@@ -28,7 +28,7 @@
 }
 
 .introduction-container {
-  height: 100vh;
+  height: 58rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,52 +36,54 @@
 
 .information {
   position: relative;
-  width: 45%;
+  width: 50%;
+  padding-left: 1rem;
 
   .overlay-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-}
 
-.color-changing-container {
-  white-space: nowrap;
-}
-
-.color-changing-container span {
-  transition: color 0.5s;
-  display: inline-block;
-  color: white; /* Initial color */
-
-  &:nth-child(4),
-  &:nth-child(9),
-  &:nth-child(10) {
-    margin-right: 10px;
+  .color-changing-container span {
+    transition: color 0.5s;
+    display: inline-block;
+    color: white; /* Initial color */
+  
+    &:nth-child(4),
+    &:nth-child(9) {
+      margin-right: 10px;
+    }
   }
-}
-
-.color-changing-container span.change {
-  color: red; /* Target color */
-}
-
-.text {
-  padding-bottom: 2.5rem;
-
-  .name {
-    line-height: .8;
+  
+  .color-changing-container span.change {
+    color: red; /* Target color */
+  }
+  
+  .text {
+    padding-bottom: 2.5rem;
+  
+    .name {
+      line-height: .8;
+    }
   }
 }
 
 .avatar-container {
   position: relative;
-  width: 50rem;
+  width: 55%;
   height: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 1rem;
 
   .rotating-img-container {
     position: absolute;
@@ -105,7 +107,6 @@
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
     display: inline-block;
-    margin-left: 10px;
 }
 
 .rotating {
