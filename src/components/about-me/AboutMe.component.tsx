@@ -1,7 +1,6 @@
 import { useSectionInView } from '../../library/hooks';
 
 import titleBox from '../../assets/images/section-title.png'
-import infoBox from '../../assets/images/info-box.png'
 
 import './AboutMe.styles.scss'
 
@@ -14,8 +13,7 @@ const AboutMe = () => {
         <h2>ABOUT ME</h2>
       </div>
       <div className="about-content">
-        <img src={infoBox} alt='banner' />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque eius, ducimus a voluptate illo assumenda similique, inventore modi harum repellat optio officiis nesciunt. Voluptate, provident minus. Tempora, tempore ducimus!</p>
+        <p>I m a self-taught Front End developer from India. I build websites with a focus on providing the experience for everyone using them and responsiveness. Curious to learn more about developing scalable distribution systems, love problem solving, and care about writing and maintainable code. A responsive design makes your website accessible to all users, regardless of their devices.</p>
       </div>
     </section>
   )
