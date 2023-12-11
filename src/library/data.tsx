@@ -37,6 +37,15 @@ export const navLinks = [
     { title: "Contact", hash: "#contact", icon: CiMail },
 ] as const;
 
+export const aboutMe = [
+  { description: "Hi, I'm Adam Clint P. Muaña, I graduated from FEU Diliman with a degree in Information Technology.\n\n Passionate about technology and problem-solving, I've gained valuable skills in programming and system development during my academic journey. \n\n I stay updated on the latest tech trends and am excited about contributing to innovative solutions.\n\n Let's connect and explore the possibilities!" },
+  { description: "I'm a Front End developer from Philippines. \n\n I build websites with a focus on providing the experience for everyone using them and responsiveness.\n\n Curious to learn more about developing scalable distribution systems, love problem solving, and care about writing and maintainable code.\n\n A responsive design makes your website accessible to all users, regardless of their devices." },
+  { description: "I have worked as a freelancer with over a year of experience in web development.\n\n During this time, I specialized in crafting websites using WordPress, where I've honed my skills in customizing themes, integrating various plugins, and seamlessly transforming PSD designs into HTML.\n\nExcited to take on new challenges and contribute my expertise to your projects!" },
+  { description: "When I'm not immersed in coding, you can often find me relaxing and unwinding by playing online games.\n\nI have a particular fondness for the intensity of FPS games, the strategic depth of Dota 2, and the immersive worlds of MMORPGs. \n\nGaming not only provides a break from the complexities of coding but also serves as a source of inspiration and creativity.\n\nLet's connect over shared interests in technology and gaming." },
+  { description: 'A passionate CMS Developer currently contributing my skills to one of the largest gambling companies in the US, BetMGM.\n\nIn my role, I specialize in crafting engaging promotion pages and building custom pages from scratch.\n\nI take pride in quality checking my own work and collaborating with teammates to maintain top-notch standards. Additionally, I conduct thorough cross-browser checks to guarantee a seamless experience for all users.' },
+  { description: "I am also the proud owner of Perhaps Manila in the Philippines, a clothing brand that represents style, comfort, and individuality.\n\nAs the creative mind behind the brand, I handle everything from design concepts to the development and maintenance of our website.\n\n Crafting a seamless online experience for our customers is not just a task; it's a passion. I believe in the power of fashion to express identity, and our clothing line is a testament to that belief." },
+] as const;
+
 export const projectsData = [
     {
         title: "Perhaps Manila",

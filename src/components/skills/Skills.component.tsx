@@ -4,20 +4,21 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 import SkillsItem from '../skills-item/SkillsItem.component'
 
 import { skillsDataCMS, skillsDataDesign, skillsDataWeb } from '../../library/data'
-import { useSectionInView } from '../../library/hooks'
+import { useLazyAnimation, useSectionInView } from '../../library/hooks'
 
 import './Skills.styles.scss'
 
 const Skills = () => {
-  const { ref } = useSectionInView('Skills')
+  const { ref: refSection } = useSectionInView('Skills')
+  const { ref: refAnimation, inView } = useLazyAnimation();
 
   return (
-    <section className='skills-container' id='skills' ref={ref}>
-    <div className="section-title-container">
+    <section className='skills-container' id='skills' ref={refSection}>
+    <div className={`section-title-container ${inView ? 'show' : ''}`} ref={refAnimation}>
       <img src={titleBox} alt='Title' />
       <h2>SKILLS</h2>
     </div>
-    <div className='skills-contents'>
+    <div className={`skills-contents ${inView ? 'show' : ''}`} ref={refAnimation}>
       <div className="web-dev-skills">
         <SkillsItem skillsData={skillsDataWeb} />
       </div>
