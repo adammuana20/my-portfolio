@@ -3,7 +3,7 @@ import { Highlight, themes } from "prism-react-renderer";
 import { CiMail } from "react-icons/ci";
 
 import FormInput from '../form-input/FormInput.component';
-import { useSectionInView } from '../../library/hooks'
+import { useLazyAnimation, useSectionInView } from '../../library/hooks'
 
 import titleBox from '../../assets/images/section-title.png'
 
@@ -21,6 +21,7 @@ const Contact = () => {
     const { ref } = useSectionInView('Contact')
     const [cursorBlink, setCursorBlink] = useState<boolean>(true);
     const [lastUpdatedField, setLastUpdatedField] = useState<string | null>(null)
+    const { ref: refAnimation, inView } = useLazyAnimation();
 
     const [formFields, setFormFields] = useState(defaultFormFields)
     const { name, email, subject, message } = formFields
@@ -102,12 +103,12 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
 
     return (
         <section className='contact-container' id='contact' ref={ref}>
-            <div className="section-title-container">
+            <div className={`section-title-container ${inView ? 'show' : ''}`} ref={refAnimation}>
                 <img src={titleBox} alt='Title' />
                 <h2>CONTACT</h2>
             </div>
             <div className="contact-details">
-                <div className='highlight-container'>
+                <div className={`highlight-container ${inView ? 'show' : ''}`} ref={refAnimation}>
                     <Highlight
                         code={codeSnippet}
                         language="tsx"
@@ -126,7 +127,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                     )}
                     </Highlight>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className={`hide-form ${inView ? 'show' : ''}`} ref={refAnimation}>
                     <FormInput 
                         form='input'
                         label='Your Name'
@@ -137,7 +138,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                             onChange:handleChange,
                             onFocus:() => setLastUpdatedField('name'),
                             onMouseEnter:() => setLastUpdatedField('name'),
-                            maxLength:50,
+                            maxLength:48,
                             required:true,
                         }}
                     />
@@ -151,7 +152,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                             onChange:handleChange,
                             onFocus:() => setLastUpdatedField('email'),
                             onMouseEnter:() => setLastUpdatedField('email'),
-                            maxLength:50,
+                            maxLength:48,
                             required:true,
                         }}
                     />
@@ -165,7 +166,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                             onChange:handleChange,
                             onFocus:() => setLastUpdatedField('subject'),
                             onMouseEnter:() => setLastUpdatedField('subject'),
-                            maxLength:50,
+                            maxLength:48,
                             required:true,
                         }}
                     />

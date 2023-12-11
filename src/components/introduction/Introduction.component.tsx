@@ -4,14 +4,15 @@ import avatar from '../../assets/images/avatar.png'
 import avatarContainer from '../../assets/images/avatar-container.png'
 
 import './Introduction.styles.scss'
-import { useSectionInView } from "../../library/hooks"
+import { useLazyAnimation, useSectionInView } from "../../library/hooks"
 
 const Introduction = () => {
-  const { ref } = useSectionInView('Home')
+  const { ref: refSection } = useSectionInView('Home')
+  const { ref: refAnimation, inView } = useLazyAnimation();
   
   return (
-    <section className='introduction-container' id='home' ref={ref}>
-      <div className="information">
+    <section className='introduction-container' id='home' ref={refSection}>
+      <div className={`information ${inView ? 'show' : ''}`} ref={refAnimation}>
           <div className="text">
             <h2>Hello, I'm</h2>
             <h1 className="glitch" data-text="Adam Muaña">Adam Muaña <span className="wave">👋</span></h1>
@@ -29,7 +30,7 @@ const Introduction = () => {
             repeat={Infinity}
           />
       </div>
-      <div className="avatar-container">
+      <div className={`avatar-container ${inView ? 'show' : ''}`} ref={refAnimation}>
         <div className="avatar">
           <img src={avatar} alt='Avatar' />
         </div>

@@ -20,3 +20,15 @@ export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
     ref,
   };
 }
+
+export function useLazyAnimation() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: '-100px 0px',
+  });
+
+  return {
+    ref,
+    inView
+  }
+}

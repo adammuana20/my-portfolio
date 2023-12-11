@@ -1,7 +1,7 @@
 @import '../../global.styles.scss';
 
 .introduction-container {
-  height: 58rem;
+  height: 55rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +20,9 @@
   border: 3px solid var(--semidarkblue);
   border-radius: 1rem;
   margin-left: 1rem;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 
   &:hover {
     border-color: var(--lightblue);
@@ -79,6 +82,9 @@
   align-items: center;
   justify-content: center;
   padding-right: 1rem;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 
   .rotating-img-container {
     position: absolute;
@@ -268,4 +274,8 @@
   100% {
     transform: none;
   }
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
