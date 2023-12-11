@@ -4,24 +4,19 @@
     min-height: 60rem;
 }
 
-@keyframes blink {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: .2;
-    }
-}
-
 .about-content {
     width: 60%;
     margin: 0 auto;
     position: relative;
     display: flex;
     align-items: center;
+    background-color: var(--blackblue);
+    padding: 2.5rem;
+    border: 3px solid var(--semidarkblue);
+    border-radius: 1rem;
 
-    p {
-        position: absolute;
-        padding: 10rem;
+    &:hover {
+        border-color: var(--lightblue);
+        box-shadow: 0 0 60px rgba(120, 204, 226, 0.8);
     }
 }

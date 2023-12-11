@@ -1,32 +1,5 @@
 @import '../../global.styles.scss';
 
-@keyframes wave-animation {
-    0% {
-      transform: rotate(0deg);
-    }
-    10% {
-      transform: rotate(14deg);
-    }
-    20% {
-      transform: rotate(-8deg);
-    }
-    30% {
-      transform: rotate(14deg);
-    }
-    40% {
-      transform: rotate(-4deg);
-    }
-    50% {
-      transform: rotate(10deg);
-    }
-    60% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-}
-
 .introduction-container {
   height: 58rem;
   display: flex;
@@ -38,40 +11,62 @@
   position: relative;
   width: 50%;
   padding-left: 1rem;
+  background-color: var(--blackblue);
+  padding-block: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 3px solid var(--semidarkblue);
+  border-radius: 1rem;
+  margin-left: 1rem;
 
-  .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  &:hover {
+    border-color: var(--lightblue);
+    box-shadow: 0 0 60px rgba(120, 204, 226, 0.8);
   }
 
-  .color-changing-container span {
-    transition: color 0.5s;
-    display: inline-block;
-    color: white; /* Initial color */
-  
-    &:nth-child(4),
-    &:nth-child(9) {
-      margin-right: 10px;
-    }
-  }
-  
-  .color-changing-container span.change {
-    color: red; /* Target color */
-  }
-  
   .text {
     padding-bottom: 2.5rem;
   
     .name {
       line-height: .8;
     }
+  }
+}
+
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
@@ -101,14 +96,6 @@
   }
 }
 
-.wave {
-    animation-name: wave-animation;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
-}
-
 .rotating {
   display: inline-block;
   animation: rotate 2s infinite linear;
@@ -120,5 +107,165 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.glitch { 
+  position: relative; 
+  animation: glitch1 2.5s infinite; 
+  -moz-animation: glitch1 2.5s infinite; 
+  -webkit-animation: glitch1 2.5s infinite; 
+  -o-animation: glitch1 2.5s infinite;
+} 
+
+.glitch:before, 
+.glitch:after { 
+  content: attr(data-text); 
+  position: absolute; 
+  left: 0px; 
+  right: 0px; 
+  top: 0px; 
+  bottom: 0px; 
+} 
+
+.glitch:before { 
+  color: var(--lightblue); 
+  animation: glitch2 2.5s infinite; 
+  -moz-animation: glitch2 2.5s infinite; 
+  -webkit-animation: glitch2 2.5s infinite; 
+  -o-animation: glitch2 2.5s infinite; 
+} 
+
+.glitch:after { 
+  color: #fff; 
+  animation: glitch3 2.5s infinite; 
+  -moz-animation: glitch3 2.5s infinite;
+  -webkit-animation: glitch3 2.5s infinite; 
+  -o-animation: glitch3 2.5s infinite; 
+} 
+
+@keyframes glitch1 {
+  0% {
+    transform: none;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+  }
+  10% {
+    transform: none;
+  }
+  27% {
+    transform: none;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+  }
+  35% {
+    transform: none;
+  }
+  52% {
+    transform: none;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+  }
+  50% {
+    transform: none;
+  }
+  72% {
+    transform: none;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+  }
+  80% {
+    transform: none;
+  }
+  100% {
+    transform: none;
+  }
+} 
+
+@keyframes glitch2 {
+  0% {
+    transform: none;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+  }
+  10% {
+    transform: none;
+  }
+  27% {
+    transform: none;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+  }
+  35% {
+    transform: none;
+  }
+  52% {
+    transform: none;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+  }
+  50% {
+    transform: none;
+  }
+  72% {
+    transform: none;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+  }
+  80% {
+    transform: none;
+  }
+  100% {
+    transform: none;
+  }
+} 
+
+@keyframes glitch3 {
+  0% {
+    transform: none;
+  }
+  7% {
+    transform: translate(2px, 3px);
+  }
+  10% {
+    transform: none;
+  }
+  27% {
+    transform: none;
+  }
+  30% {
+    transform: translate(5px, 2px);
+  }
+  35% {
+    transform: none;
+  }
+  52% {
+    transform: none;
+  }
+  55% {
+    transform: translate(5px, 1px);
+  }
+  50% {
+    transform: none;
+  }
+  72% {
+    transform: none;
+  }
+  75% {
+    transform: translate(2px, 6px);
+  }
+  80% {
+    transform: none;
+  }
+  100% {
+    transform: none;
   }
 }
