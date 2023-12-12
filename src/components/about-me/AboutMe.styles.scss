@@ -60,21 +60,21 @@
 }
 
 .section-title-container {
-    position: relative;
-    width: 30rem;
-    margin-bottom: 3rem;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  
-    img {
-      animation: blink 1s infinite;
-    }
-  
-    h2 {
-      position: absolute;
-      top: 48%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+  position: relative;
+  width: 30rem;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  img {
+    animation: blink 1s infinite;
   }
+
+  h2 {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

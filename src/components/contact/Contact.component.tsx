@@ -138,7 +138,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                             onChange:handleChange,
                             onFocus:() => setLastUpdatedField('name'),
                             onMouseEnter:() => setLastUpdatedField('name'),
-                            maxLength:48,
+                            maxLength:45,
                             required:true,
                         }}
                     />
@@ -152,7 +152,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                             onChange:handleChange,
                             onFocus:() => setLastUpdatedField('email'),
                             onMouseEnter:() => setLastUpdatedField('email'),
-                            maxLength:48,
+                            maxLength:45,
                             required:true,
                         }}
                     />
@@ -166,7 +166,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                             onChange:handleChange,
                             onFocus:() => setLastUpdatedField('subject'),
                             onMouseEnter:() => setLastUpdatedField('subject'),
-                            maxLength:48,
+                            maxLength:45,
                             required:true,
                         }}
                     />

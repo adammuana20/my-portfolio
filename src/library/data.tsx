@@ -160,7 +160,7 @@ export const FooterLinks = [
 
 export const footerSocials = [
     {
-      link: "",
+      link: "https://www.linkedin.com/in/adam-clint-mua%C3%B1a-7934a9180/",
       icon: FiLinkedin,
       name: "linkedin",
     },
