@@ -1,5 +1,5 @@
 import { useActiveSectionContext } from "../contexts/ActiveSection.context";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import type { SectionName } from "./types";
 
@@ -30,5 +30,36 @@ export function useLazyAnimation() {
   return {
     ref,
     inView
+  }
+}
+
+export function useScreenSize() {
+  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+  const [isSticky, setIsSticky] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1024) {
+        setIsMobileMenuActive(true);
+        setIsSticky(false);
+      } else {
+        setIsMobileMenuActive(false);
+        setIsSticky(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return {
+    isMobileMenuActive,
+    isSticky,
+    setIsSticky
   }
 }

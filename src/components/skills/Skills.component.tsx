@@ -18,11 +18,11 @@ const Skills = () => {
       <img src={titleBox} alt='Title' />
       <h2>SKILLS</h2>
     </div>
-    <div className={`skills-contents ${inView ? 'show' : ''}`} ref={refAnimation}>
-      <div className="web-dev-skills">
+    <div className={`skills-contents`}>
+      <div className={`web-dev-skills ${inView ? 'show' : ''}`} ref={refAnimation}>
         <SkillsItem skillsData={skillsDataWeb} />
       </div>
-      <div className="design-cms-container">
+      <div className={`design-cms-container ${inView ? 'show' : ''}`} ref={refAnimation}>
         <div className="design-skills">
           <SkillsItem skillsData={skillsDataDesign} />
         </div>

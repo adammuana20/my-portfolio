@@ -6,6 +6,7 @@ import { useActiveSectionContext } from '../../contexts/ActiveSection.context';
 
 import './Navbar.styles.scss'
 import ScrollToAnchor from '../../components/Listener';
+import { useScreenSize } from '../../library/hooks';
 
 type CustomNavLinkProps = {
   link: string;
@@ -14,8 +15,8 @@ type CustomNavLinkProps = {
 }
 
 const Navbar = () => {
-  const [isSticky, setIsSticky] = useState(false)
-  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+  const { isMobileMenuActive, isSticky, setIsSticky } = useScreenSize()
+
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
 
   useEffect(() => {
@@ -29,26 +30,6 @@ const Navbar = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 1024) {
-        setIsMobileMenuActive(true);
-        setIsSticky(false);
-      } else {
-        setIsMobileMenuActive(false);
-        setIsSticky(true);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
