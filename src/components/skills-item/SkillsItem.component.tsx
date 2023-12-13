@@ -71,15 +71,15 @@ const SkillsItem: FC<SkillSectionProps> = ({ skillsData }) => {
                             );
                         }}
                     >
-                    <img
-                        src={getSkillIconSrc(skill)}
-                        alt={`${skill.icon}-icon`}
-                        className="skill-img"
-                    />
-                    <h3 className="skill-title">
-                        {skill.title}
-                    </h3>
-                </div>
+                        <img
+                            src={getSkillIconSrc(skill)}
+                            alt={`${skill.icon}-icon`}
+                            className="skill-img"
+                        />
+                        <h3 className="skill-title">
+                            {skill.title}
+                        </h3>
+                    </div>
                 ))
             }
         </div>

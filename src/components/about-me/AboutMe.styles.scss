@@ -1,7 +1,7 @@
 @import url('../../global.styles.scss');
 
 .about-me-container {
-    min-height: 60rem;
+    min-height: 58rem;
 }
 
 .cube-section {
@@ -24,41 +24,6 @@
     }
   }
 
-.cube-container {
-    width: 550px;
-    height: 550px;
-    position: relative;
-
-    .rotate-me {
-        position: absolute;
-        top: -4.5rem;
-        right: -12rem;
-        height: 13%;
-        z-index: 10;
-        animation: curve 1s infinite;
-    }
-
-    .cube-content {
-        background-color: var(--blackblue);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        padding-inline: 3rem;
-        border: 3px solid var(--semidarkblue);
-        text-align: center;
-
-        &:hover {
-            border-color: var(--lightblue);
-        }
-
-        p {
-            font-size: 1.2rem;
-        }
-    }
-}
-
 .section-title-container {
   position: relative;
   width: 30rem;
@@ -77,4 +42,36 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+.cube-container {
+  display: flex;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.cube-wrap {
+  position: relative;
+
+  .rotate-me {
+    position: absolute;
+    top: -14%;
+    right: -30%;
+    height: 13%;
+    z-index: 10;
+    animation: curve 1s infinite;
+  }
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  padding-inline: 3rem;
+  text-align: center;
+  font-size: clamp(.9rem, 2.5vw, 1.1rem);
+  display: flex;
+  align-items: center;
 }

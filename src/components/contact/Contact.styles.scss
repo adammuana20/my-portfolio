@@ -5,8 +5,12 @@
 .contact-details {
     display: flex;
     justify-content: space-between;
-    padding-left: 3rem;
+    padding-inline: 3rem;
     align-items: start;
+
+    @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
 }
 
 form {

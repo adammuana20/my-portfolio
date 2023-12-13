@@ -6,6 +6,10 @@
 .swiper {
     width: 100%;
     padding-inline: 10rem;
+
+    @media only screen and (max-width: 1024px) {
+        padding-inline: 5rem;
+    }
 }
 
 .slider {

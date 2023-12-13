@@ -24,26 +24,29 @@
 }
 
 .skill-icon {
-    cursor: pointer;
-    display: flex;
-    border: 1px solid;
-    border-radius: 1rem;
-    padding: 1.4rem;
-    align-items: center;
-    text-align: center;
-    background-color: var(--darkblue);
+  cursor: pointer;
+  display: flex;
+  border: 1px solid;
+  border-radius: 1rem;
+  padding: 1.4rem;
+  align-items: center;
+  text-align: center;
+  background-color: var(--darkblue);
+  flex-direction: column;
+  gap: .5rem;
 }
 
 .skill-img {
-    height: 5rem;
+  height: 5rem;
 }
 
 .skill-title {
-    display: none;
+  display: none;
 
-    @media only screen and (max-width: 1024px) {
-        display: flex;
-    }
+  @media only screen and (max-width: 1024px) {
+    display: flex;
+    font-size: 1.2rem;
+  }
 }
 
 .skill-item:hover {
