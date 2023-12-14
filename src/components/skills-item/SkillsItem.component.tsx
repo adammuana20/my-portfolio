@@ -5,8 +5,8 @@ import './SkillsItem.styles.scss'
 type Skill = {
     title: string;
     hash: string;
-    icon: string[];
-    color: string[];
+    icon: readonly string[];
+    color: readonly string[];
 }
   
 type SkillCategory = {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FC, ReactNode } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 // import { Motion, spring } from 'react-motion';
 import { animated, useSpring } from '@react-spring/web'
 import './Cube.styles.scss'
