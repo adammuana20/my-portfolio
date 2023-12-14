@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FC } from 'react';
-import { Motion, spring } from 'react-motion';
+import { TransitionMotion as Motion, spring } from 'react-motion';
 import './Cube.styles.scss'
 
 type Face = {
