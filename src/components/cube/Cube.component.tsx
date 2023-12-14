@@ -43,7 +43,7 @@ const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
     rotateY: 0,
     rotateZ: 0
   });
-  const [faces] = useState<Faces>({
+  const [faces, setFaces] = useState<Faces>({
     front: { translate: { x: 0, y: 0, z: faceSize }, rotate: { x: 0, y: 1, z: 0, deg: 0 } },
     right: { translate: { x: faceSize, y: 0, z: 0 }, rotate: { x: 0, y: 1, z: 0, deg: 90 } },
     back: { translate: { x: 0, y: 0, z: -faceSize }, rotate: { x: 0, y: 1, z: 0, deg: 180 } },
@@ -66,6 +66,28 @@ const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
       }));
     }
   }, [faces, index, isMoved, isPressed]);
+
+  useEffect(() => {
+    // Update the cube size and faceSize when the 'size' prop changes
+    setCube((prevCube) => ({
+      ...prevCube,
+      width: size,
+      height: size,
+    }));
+
+    const newFaceSize = size / 2;
+
+    setFaces((prevFaces) => ({
+      ...prevFaces,
+      front: { ...prevFaces.front, translate: { ...prevFaces.front.translate, z: newFaceSize } },
+      right: { ...prevFaces.right, translate: { ...prevFaces.right.translate, x: newFaceSize } },
+      back: { ...prevFaces.back, translate: { ...prevFaces.back.translate, z: -newFaceSize } },
+      left: { ...prevFaces.left, translate: { ...prevFaces.left.translate, x: -newFaceSize } },
+      top: { ...prevFaces.top, translate: { ...prevFaces.top.translate, y: -newFaceSize } },
+      bottom: { ...prevFaces.bottom, translate: { ...prevFaces.bottom.translate, y: newFaceSize } },
+    }));
+    
+  }, [size]);
 
   const [cubeChildren, setCubeChildren] = useState<React.ReactNode[]>([]);
 

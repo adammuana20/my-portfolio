@@ -17,10 +17,14 @@
 }
 
 .icons-container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @media only screen and (max-width: 1023px) {
+    grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
+  }
 }
 
 .skill-icon {
@@ -43,7 +47,7 @@
 .skill-title {
   display: none;
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1023px) {
     display: flex;
     font-size: 1.2rem;
   }

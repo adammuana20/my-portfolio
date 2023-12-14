@@ -23,11 +23,11 @@ const AboutMe = () => {
         <h2>ABOUT ME</h2>
       </div>
       <div className={`cube-container ${inView ? 'show' : ''}`} ref={refAnimation}>
-        <div className='cube-wrap' style={{ width: '31rem', height: '31rem' }}>
+        <div className='cube-wrap'>
           <div className='rotate-me'>
             <img src={rotateMe} alt="Rotate" />
           </div>
-          <Cube index='front' size={isMobileMenuActive ? 250 : 500}>
+          <Cube index='front' size={isMobileMenuActive ? 350 : 500}>
             { aboutMe.map((about, idx) => (
                 <div className={`face`} key={idx}>
                   <p>{about.description.split('\n').map((line, lineIndex) => (

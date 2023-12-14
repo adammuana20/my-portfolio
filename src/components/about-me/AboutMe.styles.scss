@@ -10,8 +10,7 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transform: translateX(100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: all 1s;
 }
 
 @keyframes curve {
@@ -28,9 +27,9 @@
   position: relative;
   width: 30rem;
   margin-bottom: 3rem;
+
   opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: all 1s;
 
   img {
     animation: blink 1s infinite;
@@ -42,6 +41,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  @media only screen and (max-width: 799px) {
+    width: 100%;
+  }
 }
 
 .cube-container {
@@ -49,12 +52,17 @@
   justify-content: center;
 
   opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: all 1s;
+
+  @media only screen and (max-width: 799px) {
+    margin-top: 5rem;
+  }
 }
 
 .cube-wrap {
   position: relative;
+  width: 31rem;
+  height: 31rem;
 
   .rotate-me {
     position: absolute;
@@ -64,6 +72,22 @@
     z-index: 10;
     animation: curve 1s infinite;
   }
+
+  @media only screen and (max-width: 799px) {
+    width: 22rem;
+    height: 22rem;
+
+    .rotate-me {
+      right: -18%;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .rotate-me {
+      right: -9%;
+      top: -18%;
+    }
+  }
 }
 
 .face {
@@ -71,7 +95,16 @@
   height: 100%;
   padding-inline: 3rem;
   text-align: center;
-  font-size: clamp(.9rem, 2.5vw, 1.1rem);
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 799px) {
+    font-size: .9rem;
+    padding-inline: 2rem;
+  }
+}
+
+.show {
+  opacity: 1;
 }

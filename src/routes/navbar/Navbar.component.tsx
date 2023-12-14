@@ -2,11 +2,12 @@ import { FC, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
 import { navLinks } from '../../library/data'
 
+import ScrollToAnchor from '../../components/Listener';
+import { useScreenSize } from '../../library/hooks';
 import { useActiveSectionContext } from '../../contexts/ActiveSection.context';
 
 import './Navbar.styles.scss'
-import ScrollToAnchor from '../../components/Listener';
-import { useScreenSize } from '../../library/hooks';
+
 
 type CustomNavLinkProps = {
   link: string;
@@ -17,7 +18,7 @@ type CustomNavLinkProps = {
 const Navbar = () => {
   const { isMobileMenuActive, isSticky, setIsSticky } = useScreenSize()
 
-  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,35 +64,73 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={`navlinks-container ${isSticky ? 'sticky' : ''}`}>
+    <>
       <ScrollToAnchor />
-      { navLinks.map((link, idx) => {
-          return(
-            <CustomNavLink 
-              key={idx}
-              link={link.hash}
-              linkTitle={link.title}
-            >
-              { link.title === activeSection ? (
-                  <>
-                    <span className='left-bracket'>&#123;</span>
-                    {link.title}
-                    <span className='right-bracket'>&#125;</span>
-                  </>
-                ) : (
-                  <div onClick={() => {
-                      setActiveSection(link.title)
-                      setTimeOfLastClick(Date.now())
-                    }}>
-                    {link.title}
-                  </div>
-                )
-              }
-            </CustomNavLink>
-          )
-        })
+      { !isMobileMenuActive && (
+        <nav className={`desktop-container ${isSticky && !isMobileMenuActive ? 'sticky' : ''}`}>
+          { navLinks.map((link, idx) => {
+              return(
+                <CustomNavLink 
+                  key={idx}
+                  link={link.hash}
+                  linkTitle={link.title}
+                >
+                  { link.title === activeSection ? (
+                      <>
+                        <span className='left-bracket'>&#123;</span>
+                        {link.title}
+                        <span className='right-bracket'>&#125;</span>
+                      </>
+                    ) : (
+                      <div onClick={() => {
+                          setActiveSection(link.title)
+                          setTimeOfLastClick(Date.now())
+                        }}>
+                        {link.title}
+                      </div>
+                    )
+                  }
+                </CustomNavLink>
+              )
+            })
+          }
+        </nav>
+      )}
+      { isMobileMenuActive &&
+        <nav className={`mobile-container `}>
+          { navLinks.map((link, idx) => {
+              return(
+                <CustomNavLink 
+                  key={idx}
+                  link={link.hash}
+                  linkTitle={link.title}
+                >
+                  { link.title === activeSection ? (
+                      <link.icon />
+                    ) : (
+                      <div 
+                        className='menu-icon'
+                        onClick={() => {
+                          setActiveSection(link.title)
+                          setTimeOfLastClick(Date.now())
+                          if (link.title === "Home") {
+                            document.body.scrollIntoView({
+                              behavior: "smooth",
+                              block: "start",
+                            });
+                          }
+                        }}>
+                        <link.icon />
+                      </div>
+                    )
+                  }
+                </CustomNavLink>
+              )
+            })
+          }
+        </nav>
       }
-    </nav>
+    </>
   )
 }
 

@@ -8,26 +8,30 @@
     padding-inline: 3rem;
     align-items: start;
 
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1023px) {
         flex-direction: column;
     }
 }
 
 form {
     gap: 1rem;
-    width: 100%;
+    width: 45%;
     padding-inline: 4rem;
+
+    @media only screen and (max-width: 1023px) {
+        width: 100%;
+    }
 }
 
 .highlight-container {
-    width: 100%;
+    width: 55%;
     border: 3px solid var(--semidarkblue);
     border-radius: 1rem;
     background-color: rgb(1, 22, 39);
     padding: 1.5rem 3rem;
+    
     opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: all 1s;
 
     &:hover {
         border-color: var(--lightblue);
@@ -38,6 +42,10 @@ form {
         font-size: 1.4rem;
         line-height: 1.7rem;
     }
+
+    @media only screen and (max-width: 1023px) {
+        width: 100%;
+    }
 }
 
 .form-btn {
@@ -47,11 +55,9 @@ form {
 
 .hide-form {
     opacity: 0;
-    transform: translateX(100%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: all 1s;
 }
 
 .show {
     opacity: 1;
-    transform: translateY(0);
 }

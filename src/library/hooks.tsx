@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import type { SectionName } from "./types";
 
 export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
-  const isMobile = window.innerWidth <= 1024;
+  const isMobile = window.innerWidth <= 799;
   const { ref, inView } = useInView({
     threshold: isMobile ? 0.1 : threshold,
   });
@@ -39,7 +39,7 @@ export function useScreenSize() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 1024) {
+      if (window.innerWidth <= 799) {
         setIsMobileMenuActive(true);
         setIsSticky(false);
       } else {

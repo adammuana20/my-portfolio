@@ -69,7 +69,11 @@
 
 .disclaimer {
     text-align: center;
-    padding-block: 1.5rem;
+    padding: 1.5rem 1rem;
     font-size: .8rem;
     opacity: .7;
+
+    @media only screen and (max-width: 799px) {
+        padding-bottom: 6rem;
+    }
 }

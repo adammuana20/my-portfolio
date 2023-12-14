@@ -2,7 +2,7 @@
 
 
 
-.navlinks-container {
+.desktop-container {
     display: flex;
     justify-content: center;
     gap: 2.5rem;
@@ -11,6 +11,10 @@
     max-width: 45rem;
     margin: 0 auto;
     align-items: center;
+
+    @media only screen and (max-width: 799px) {
+        display: none;
+    }
 }
 
 .link {
@@ -23,6 +27,10 @@
         left: -1rem;
         top: 0;
         color: $primary-color;
+
+        @media only screen and (max-width: 799px) {
+            display: none;
+        }
     }
     
     .right-bracket { 
@@ -30,6 +38,10 @@
         right: -1rem;
         top: 0;
         color: $primary-color;
+
+        @media only screen and (max-width: 799px) {
+            display: none;
+        }
     }
 }
 
@@ -51,4 +63,31 @@
     background-color: rgba(59, 101, 145, .7);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     backdrop-filter: blur(0.5rem);
+
+    @media only screen and (max-width: 799px) {
+        display: none;
+    }
+}
+
+.mobile-container {
+    z-index: 50;
+    display: flex;
+    gap: 2rem;
+    padding: .5rem 1rem;
+    width: 95%;
+    justify-content: space-between;
+    margin-inline: 2.5%;
+    position: fixed;
+    bottom: 1.5rem;
+    border-radius: 9999px;
+    border: none;
+    background-color: rgba(59, 101, 145, .7);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(0.5rem);
+
+    .menu-icon {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
 }
