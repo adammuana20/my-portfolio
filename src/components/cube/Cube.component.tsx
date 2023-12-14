@@ -1,5 +1,4 @@
 import React, { useState, useEffect, FC } from 'react';
-// import { Motion, spring } from 'react-motion';
 import { animated, useSpring } from '@react-spring/web'
 import './Cube.styles.scss'
 
@@ -172,21 +171,18 @@ const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
     endGesture();
   };
 
-  const { rotateX, rotateY, rotateZ } = useSpring({
-    rotateX: cube.rotateX,
-    rotateY: cube.rotateY,
-    rotateZ: cube.rotateZ,
+  const styles = useSpring({
+    transform: `translate3d(${cube.translate.x}px, ${cube.translate.y}px, ${cube.translate.z}px) rotateX(${cube.rotateX}deg) rotateY(${cube.rotateY}deg) rotateZ(${cube.rotateZ}deg)`,
+    config: { tension: 100, friction: 50 }
   })
-
+  
+  
   return (
     <div className={`cube-wrapper`}>
-      <animated.div
-        style={{ rotateX, rotateY, rotateZ }}
-      >
-          <div
+          <animated.div
             className={`cube`}
             style={{
-              transform: `translate3d(${cube.translate.x}px, ${cube.translate.y}px, ${cube.translate.z}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`,
+              ...styles
             }}
           >
             {Object.keys(faces).map((face, key) => {
@@ -227,8 +223,7 @@ const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
                 </div>
               );
             })}
-          </div>
-      </animated.div>
+          </animated.div>
     </div>
   );
 };
