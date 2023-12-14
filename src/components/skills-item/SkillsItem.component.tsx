@@ -5,8 +5,8 @@ import './SkillsItem.styles.scss'
 type Skill = {
     title: string;
     hash: string;
-    icon: any;
-    color: any;
+    icon: string[];
+    color: string[];
 }
   
 type SkillCategory = {
@@ -24,9 +24,7 @@ const SkillsItem: FC<SkillSectionProps> = ({ skillsData }) => {
     const getSkillIconSrc = (skill: Skill) => {
         if (skill.title.includes("Express") || skill.title.includes("Adobe Photoshop")) {
           return skill.icon[1];
-        } else if (skill.title !== "Adobe Photoshop" && skill.title !== "Express") {
-          return skill.icon;
-        } else {
+        }  else {
           return skill.icon[0];
         }
       };
@@ -34,8 +32,6 @@ const SkillsItem: FC<SkillSectionProps> = ({ skillsData }) => {
     const getSkillColor = (skill: Skill) => {
         if (skill.title.includes("Express") || skill.title.includes("Adobe Photoshop")) {
             return skill.color[1];
-        } else if (skill.title !== "Adobe Photoshop" && skill.title !== "Express") {
-            return skill.color;
         } else {
             return skill.color[0];
         }

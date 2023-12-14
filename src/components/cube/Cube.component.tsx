@@ -1,5 +1,6 @@
-import React, { useState, useEffect, FC } from 'react';
-import { TransitionMotion as Motion, spring } from 'react-motion';
+import React, { useState, useEffect, FC, ReactNode } from 'react';
+// import { Motion, spring } from 'react-motion';
+import { animated, useSpring } from '@react-spring/web'
 import './Cube.styles.scss'
 
 type Face = {
@@ -171,16 +172,17 @@ const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
     endGesture();
   };
 
+  const { rotateX, rotateY, rotateZ } = useSpring({
+    rotateX: cube.rotateX,
+    rotateY: cube.rotateY,
+    rotateZ: cube.rotateZ,
+  })
+
   return (
     <div className={`cube-wrapper`}>
-      <Motion
-        style={{
-          rotateX: spring(cube.rotateX),
-          rotateY: spring(cube.rotateY),
-          rotateZ: spring(cube.rotateZ),
-        }}
+      <animated.div
+        style={{ rotateX, rotateY, rotateZ }}
       >
-        {({ rotateX, rotateY, rotateZ }: { rotateX: number; rotateY: number; rotateZ: number }) => (
           <div
             className={`cube`}
             style={{
@@ -226,8 +228,7 @@ const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
               );
             })}
           </div>
-        )}
-      </Motion>
+      </animated.div>
     </div>
   );
 };
