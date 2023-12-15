@@ -26,7 +26,7 @@ const Introduction = () => {
             ]}
             wrapper="div"
             speed={50}
-            style={{ fontSize: 'clamp(2rem, 2vw, 3rem)', display: 'block', textAlign: 'center', }}
+            style={{ fontSize: 'clamp(1.8rem, 2vw, 3rem)', display: 'block', textAlign: 'center', }}
             repeat={Infinity}
           />
       </div>

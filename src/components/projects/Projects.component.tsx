@@ -24,7 +24,7 @@ const Projects = () => {
             <section className='projects-container' id='projects' ref={refSection}>
                 <div className={`section-title-container ${inView ? 'show' : ''}`} ref={refAnimation}>
                     <img src={titleBox} alt='Title' />
-                    <h2>PROJECTS</h2>
+                    <h2 className='section-title'>PROJECTS</h2>
                 </div>
                 <div className={`hide ${inView ? 'show' : ''}`}>
                     <Swiper     
@@ -36,19 +36,21 @@ const Projects = () => {
                         autoplay={{
                             delay: 4000,
                             pauseOnMouseEnter: true,
+                            disableOnInteraction: true,
                         }}
                         pagination={{
                             clickable: true,
                         }}
+                        draggable={true}
                     >
                         { projectsData.map((project, idx) => (
                             <SwiperSlide key={idx} className='slider'>
                                 <div className='slider-content'>
-                                    <h2>{project.title}</h2>
+                                    <h2 className='desktop-project-title'>{project.title}</h2>
                                     <p>{project.description}</p>
                                     <div className="technologies">
                                         <h3>Technologies</h3>
-                                        <div className="icons-container">
+                                        <div className="projects-icons-container">
                                             { project.technologies.map((technology, innerIdx) => (
                                                     <img
                                                         key={innerIdx}
@@ -79,8 +81,8 @@ const Projects = () => {
                                         />
                                     </div>
                                 </div>
-
                                 <div className="mockup-container">
+                                    <h2 className='mobile-project-title'>{project.title}</h2>
                                     <img
                                     src={project.image}
                                     alt={`${project.title}-project-mockup`}

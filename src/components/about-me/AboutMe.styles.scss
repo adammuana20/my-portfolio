@@ -1,7 +1,12 @@
 @import url('../../global.styles.scss');
 
 .about-me-container {
-    min-height: 58rem;
+    min-height: 50rem;
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+    padding-inline: 1rem;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .cube-section {
@@ -26,7 +31,7 @@
 .section-title-container {
   position: relative;
   width: 30rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 
   opacity: 0;
   transition: all 1s;
@@ -35,15 +40,37 @@
     animation: blink 1s infinite;
   }
 
-  h2 {
+  .section-title {
     position: absolute;
     top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 2.5rem;
   }
 
   @media only screen and (max-width: 799px) {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 60%;
+    }
+
+    .section-title {
+      font-size: 4.5vw;
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    img {
+      width: 100%;
+    }
+
+    .section-title {
+      font-size: 8vw;
+    }
   }
 }
 
@@ -55,7 +82,7 @@
   transition: all 1s;
 
   @media only screen and (max-width: 799px) {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 }
 
@@ -100,8 +127,8 @@
   align-items: center;
 
   @media only screen and (max-width: 799px) {
-    font-size: .9rem;
-    padding-inline: 2rem;
+    font-size: .85rem;
+    padding-inline: 1.5rem;
   }
 }
 
