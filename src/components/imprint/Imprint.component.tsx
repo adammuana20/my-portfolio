@@ -1,8 +1,8 @@
-
+import './Imprint.styles.scss'
 
 const Imprint = () => {
   return (
-    <article className="flex flex-col gap-6 max-w-[70vw]">
+    <article className="imprint-container">
         <h2 className='title'>Site Notice</h2>
         <h3>Contact</h3>
         <p>Phone: +639771410913</p>

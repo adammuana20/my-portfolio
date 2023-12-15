@@ -1,0 +1,22 @@
+.privacy-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2.5rem;
+}
+
+.privacy-policy {
+    font-size: 2.8rem;
+}
+
+.privacy-title {
+    font-size: 2rem;
+}
+
+.privacy-subtitle {
+    font-size: 1.7rem;
+}
+
+.privacy-link {
+    color: var(--lightblue);
+    font-size: 1rem;
+}
