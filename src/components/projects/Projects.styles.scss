@@ -33,6 +33,7 @@
     padding: 3rem;
     border-radius: 1rem;
     border: 3px solid var(--semidarkblue);
+    transition: all .5s;
 
     &:hover {
         border-color: var(--lightblue);

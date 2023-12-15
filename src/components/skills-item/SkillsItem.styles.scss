@@ -5,6 +5,7 @@
     background-color: var(--blackblue);
     border: 3px solid var(--semidarkblue);
     border-radius: 1rem;
+    transition: all .5s;
 
     &:hover {
         border-color: var(--lightblue);

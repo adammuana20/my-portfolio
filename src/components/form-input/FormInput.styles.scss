@@ -26,6 +26,7 @@ $main-color: black;
     border: .3rem solid var(--semidarkblue);
     border-radius: 1rem;
     margin: 1rem 0;
+    transition: all 1s;
 
     &:hover {
       border-color: var(--lightblue);
