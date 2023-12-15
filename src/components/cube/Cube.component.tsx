@@ -173,7 +173,7 @@ const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
 
   const styles = useSpring({
     transform: `translate3d(${cube.translate.x}px, ${cube.translate.y}px, ${cube.translate.z}px) rotateX(${cube.rotateX}deg) rotateY(${cube.rotateY}deg) rotateZ(${cube.rotateZ}deg)`,
-    config: { tension: 100, friction: 50 }
+    config: { tension: 100, friction: size > 400 ? 50 : 60 }
   })
   
   

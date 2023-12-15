@@ -40,7 +40,7 @@ const SkillsItem: FC<SkillSectionProps> = ({ skillsData }) => {
   return (
     <div className='skills-data-container'>
         <h3>{skillsData[0].skillsTitle}</h3>
-        <div className="icons-container">
+        <div className="skills-icons-container">
             { skillsData[0].skills.map((skill, idx) => (
                     <div
                         key={idx}

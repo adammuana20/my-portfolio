@@ -105,7 +105,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
         <section className='contact-container' id='contact' ref={ref}>
             <div className={`section-title-container ${inView ? 'show' : ''}`} ref={refAnimation}>
                 <img src={titleBox} alt='Title' />
-                <h2>CONTACT</h2>
+                <h2 className='section-title'>CONTACT</h2>
             </div>
             <div className="contact-details">
                 <div className={`highlight-container ${inView ? 'show' : ''}`} ref={refAnimation}>

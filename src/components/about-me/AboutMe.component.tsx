@@ -20,7 +20,7 @@ const AboutMe = () => {
     <section className='about-me-container' id='about-me' ref={refSection}>
       <div className={`section-title-container ${inView ? 'show' : ''}`} ref={refAnimation}>
         <img src={titleBox} alt='Title' />
-        <h2>ABOUT ME</h2>
+        <h2 className='section-title'>ABOUT ME</h2>
       </div>
       <div className={`cube-container ${inView ? 'show' : ''}`} ref={refAnimation}>
         <div className='cube-wrap'>

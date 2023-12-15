@@ -16,7 +16,7 @@ const Skills = () => {
     <section className='skills-container' id='skills' ref={refSection}>
     <div className={`section-title-container ${inView ? 'show' : ''}`} ref={refAnimation}>
       <img src={titleBox} alt='Title' />
-      <h2>SKILLS</h2>
+      <h2 className='section-title'>SKILLS</h2>
     </div>
     <div className={`skills-contents`}>
       <div className={`web-dev-skills ${inView ? 'show' : ''}`} ref={refAnimation}>

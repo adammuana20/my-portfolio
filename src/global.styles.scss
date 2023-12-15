@@ -82,17 +82,17 @@ a {
 }
 
 h1 {
-  font-size: clamp(3rem, 3vw, 4rem);
+  font-size: clamp(2.5rem, 3vw, 4rem);
   font-family: $font-bold;
 }
 
 h2 {
-  font-size: clamp(2rem, 2vw, 3rem);
+  font-size: clamp(2rem, 2.5vw, 3rem);
   font-family: $font-semi-bold;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 2.5vw, 1.8rem);
   font-family: $font-semi-bold;
 }
 
@@ -128,23 +128,9 @@ img {
   }
 }
 
-.about-me-container,
-.skills-container,
-.projects-container,
-.contact-container {
-  padding-top: 6rem;
-  padding-inline: 1rem;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-.projects-container {
-  margin-top: 8rem;
-}
-
 footer {
   background-color: var(--blackblue);
-  margin-top: 3rem;
+  margin-top: 7rem;
 }
 
 article {

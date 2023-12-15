@@ -7,6 +7,7 @@
   justify-content: center;
   max-width: 1500px;
   margin: 0 auto;
+  user-select: none;
 
   @media only screen and (max-width: 1023px) {
     flex-direction: column-reverse;
@@ -16,9 +17,10 @@
     padding-top: 1rem;
   }
 
-  @media only screen and (max-width: 799) {
+  @media only screen and (max-width: 799px) {
     padding-top: 7rem;
     justify-content: flex-end;
+    padding-inline: 1rem;
   }
 }
 
@@ -50,12 +52,22 @@
     .name {
       line-height: .8;
     }
+
+    @media only screen and (max-width: 799px) {
+      h2 {
+        text-align: center;
+      }
+    }
   }
 
   @media only screen and (max-width: 1023px) {
     width: inherit;
     padding: 2rem 2.5rem;
     margin-inline: 0;
+  }
+
+  @media only screen and (max-width: 799px) {
+    padding: 2rem;
   }
 }
 
