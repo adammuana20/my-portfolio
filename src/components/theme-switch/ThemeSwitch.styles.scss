@@ -1,0 +1,107 @@
+.tooltip {
+    position: fixed;
+    right: 2rem;
+    z-index: 10;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    &.tooltip-height {
+        height: 12rem;
+    }
+}
+
+
+.tooltip-btn {
+    color: #000;
+    border: none;
+    font-size: 1.4rem;
+    padding: .5rem;
+    border-radius: 50%;
+    line-height: 0;
+    cursor: pointer;
+    right: 2rem;
+    transition: all .2s;
+    position: fixed;
+
+    a {
+        color: #000;
+        font-size: 1.4rem;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &.tooltip-bottom-show {
+        z-index: 10;
+        opacity: 1;
+
+        &:first-child {
+            z-index: 10;
+            bottom: 1rem;
+        }
+    
+        &:nth-child(2) {
+            bottom: 4.2rem;
+            z-index: 10;
+        }
+    
+        &:nth-child(3) {
+            bottom: 7.2rem;
+            z-index: 10;
+        }
+    
+        &:last-child {
+            bottom: 10.2rem;
+            z-index: 10;
+        }
+    }
+
+    &.tooltip-top-show {
+        z-index: 10;
+        opacity: 1;
+
+        &:first-child {
+            z-index: 10;
+            top: 1.5rem;
+        }
+    
+        &:nth-child(2) {
+            top: 4.5rem;
+            z-index: 10;
+        }
+    
+        &:nth-child(3) {
+            top: 7.5rem;
+            z-index: 10;
+        }
+    
+        &:last-child {
+            top: 10.5rem;
+            z-index: 10;
+        }
+    }
+
+    &.tooltip-hide {
+        opacity: 0;
+        z-index: -100;
+    }
+}
+
+.top {
+    top: 1.5rem;
+}
+
+.bottom {
+    bottom: 1.2rem;
+}
+
+.dark-mode {
+    color: #fff;
+    background-color: var(--blackblue);
+    border: 1px solid #fff;
+
+    a {
+        color: #fff;
+    }
+}

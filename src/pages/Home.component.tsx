@@ -6,11 +6,13 @@ import { ScrollProgress } from "../components/scroll-progress/ScrollProgress.com
 import Projects from "../components/projects/Projects.component"
 import Contact from "../components/contact/Contact.component"
 import Footer from "../components/footer/Footer.component"
+import ThemeSwitch from "../components/theme-switch/ThemeSwitch.component"
 
 
 const Home = () => {
   return (
     <Layout>
+      <ThemeSwitch />
       <header>
         <ScrollProgress
           position={"left"}

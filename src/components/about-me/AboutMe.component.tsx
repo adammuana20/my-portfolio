@@ -14,7 +14,7 @@ import './AboutMe.styles.scss'
 const AboutMe = () => {
   const { ref: refSection } = useSectionInView("About Me");
   const { ref: refAnimation, inView } = useLazyAnimation();
-  const { isMobileMenuActive } = useScreenSize()
+  const { isMobile } = useScreenSize()
 
   return (
     <section className='about-me-container' id='about-me' ref={refSection}>
@@ -27,7 +27,7 @@ const AboutMe = () => {
           <div className='rotate-me'>
             <img src={rotateMe} alt="Rotate" />
           </div>
-          <Cube index='front' size={isMobileMenuActive ? 350 : 500}>
+          <Cube index='front' size={isMobile ? 350 : 500}>
             { aboutMe.map((about, idx) => (
                 <div className={`face`} key={idx}>
                   <p>{about.description.split('\n').map((line, lineIndex) => (

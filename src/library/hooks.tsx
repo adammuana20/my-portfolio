@@ -34,32 +34,41 @@ export function useLazyAnimation() {
 }
 
 export function useScreenSize() {
-  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [isSticky, setIsSticky] = useState(false)
+  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 799) {
-        setIsMobileMenuActive(true);
+        setIsMobile(true);
         setIsSticky(false);
       } else {
-        setIsMobileMenuActive(false);
+        setIsMobile(false);
         setIsSticky(true);
       }
     };
 
+    const handleTouchMove = () => {
+      setIsTooltipVisible(false);
+    };
+
     window.addEventListener("resize", handleResize);
+    window.addEventListener("touchmove", handleTouchMove);
 
     handleResize();
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, []);
 
   return {
-    isMobileMenuActive,
+    isMobile,
     isSticky,
-    setIsSticky
+    setIsSticky,
+    isTooltipVisible,
+    setIsTooltipVisible
   }
 }
