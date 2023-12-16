@@ -16,7 +16,7 @@ type CustomNavLinkProps = {
 }
 
 const Navbar = () => {
-  const { isMobileMenuActive, isSticky, setIsSticky } = useScreenSize()
+  const { isMobile, isSticky, setIsSticky } = useScreenSize()
 
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()  
 
@@ -66,8 +66,8 @@ const Navbar = () => {
   return (
     <>
       <ScrollToAnchor />
-      { !isMobileMenuActive && (
-        <nav className={`desktop-container ${isSticky && !isMobileMenuActive ? 'sticky' : ''}`}>
+      { !isMobile && (
+        <nav className={`desktop-container ${isSticky && !isMobile ? 'sticky' : ''}`}>
           { navLinks.map((link, idx) => {
               return(
                 <CustomNavLink 
@@ -96,7 +96,7 @@ const Navbar = () => {
           }
         </nav>
       )}
-      { isMobileMenuActive &&
+      { isMobile &&
         <nav className={`mobile-container `}>
           { navLinks.map((link, idx) => {
               return(
