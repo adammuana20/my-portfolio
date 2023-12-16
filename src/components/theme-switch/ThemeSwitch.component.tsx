@@ -39,7 +39,8 @@ const ThemeSwitch = () => {
         <button
             className={`tooltip-btn 
                 ${theme === 'dark' ? 'dark-mode' : ''}
-                ${isTooltipVisible && !isMobile ? 'tooltip-bottom-show' : isTooltipVisible && isMobile ? 'tooltip-top-show': 'tooltip-hide'}
+                ${isTooltipVisible && !isMobile ? 'tooltip-bottom-show' : 
+                    isTooltipVisible && isMobile ? 'tooltip-top-show': 'tooltip-hide'}
                 ${isMobile ? 'top': 'bottom'}
             `}
         >
@@ -54,7 +55,8 @@ const ThemeSwitch = () => {
         <button
             className={`tooltip-btn 
                 ${theme === 'dark' ? 'dark-mode' : ''}
-                ${isTooltipVisible && !isMobile ? 'tooltip-bottom-show' : isTooltipVisible && isMobile ? 'tooltip-top-show': 'tooltip-hide'}
+                ${isTooltipVisible && !isMobile ? 'tooltip-bottom-show' : 
+                    isTooltipVisible && isMobile ? 'tooltip-top-show': 'tooltip-hide'}
                 ${isMobile ? 'top': 'bottom'}
             `}
         >
@@ -69,7 +71,8 @@ const ThemeSwitch = () => {
         <button
             className={`tooltip-btn 
                 ${theme === 'dark' ? 'dark-mode' : ''}
-                ${isTooltipVisible && !isMobile ? 'tooltip-bottom-show' : isTooltipVisible && isMobile ? 'tooltip-top-show': 'tooltip-hide'}
+                ${isTooltipVisible && !isMobile ? 'tooltip-bottom-show' : 
+                    isTooltipVisible && isMobile ? 'tooltip-top-show': 'tooltip-hide'}
                 ${isMobile ? 'top': 'bottom'}
             `}
         >
