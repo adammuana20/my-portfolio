@@ -163,4 +163,9 @@
   .group .form-input-label {
     color: var(--white);
   }
+
+  .swiper-pagination-bullet,
+  .swiper-pagination-bullet-active {
+      background-color: #fff;
+  }
 }

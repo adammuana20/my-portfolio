@@ -7,6 +7,7 @@ import './Footer.styles.scss'
 import { FooterLinks, footerSocials } from '../../library/data'
 
 import 'reactjs-popup/dist/index.css';
+import { useTheme } from '../../contexts/Theme.context';
 
 type SocialLink = {
   link: string;
@@ -17,9 +18,11 @@ type SocialLink = {
 }
 
 const Footer = () => {
+  const { theme } = useTheme()
+
   return (
     <footer>
-      <div className="footer-container">
+      <div className={`footer-container`}>
         <div className='footer-links'>
           <div className="modal-container">
             { FooterLinks.map((link, index) => (
@@ -38,7 +41,7 @@ const Footer = () => {
                 {
                   ((close: () => void) => (
                     <div
-                      className={`modal`}
+                      className={`modal ${theme === 'dark' ? 'dark-popup' : ''}`}
                     >
                       <button
                         className="close-btn fixed top-0 right-0 bg-orange p-4 z-10 rounded-2xl m-4 hover:bg-lightblue transition-all duration-500 dark-shadow text-white"

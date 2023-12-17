@@ -11,9 +11,10 @@
 }
 
 .popup-content {
-    border-radius: 1rem;
+    border: none !important;
     position: relative;
     width: 75% !important;
+    background: transparent !important;
 }
 
 .modal-container {
@@ -23,6 +24,7 @@
 
     .footer-link {
         font-size: 1.1rem;
+        color: #fff;
 
         &:hover {
             color: var(--lightblue);
@@ -34,12 +36,15 @@
     padding: 1.5rem;
     overflow-y: auto;
     max-height: 80vh;
+    background-color: var(--icewhite);
+    border-radius: 1rem;
+    position: relative;
 }
 
 .close-btn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: .2rem;
+    right: .2rem;
     margin: .6rem;
     background-color: var(--blackblue);
     padding: .6rem;
@@ -71,8 +76,28 @@
     text-align: center;
     font-size: .8rem;
     opacity: .6;
+    color: #fff;
 
     @media only screen and (max-width: 799px) {
         padding-bottom: 6rem;
+    }
+}
+
+.dark-popup {
+    background-color: var(--darkblue);
+    
+    .imprint-container,
+    .privacy-container {
+        color: #fff;
+    }
+
+    .close-btn {
+        background-color: var(--semidarkblue);
+        color: var(--white);
+
+        &:hover {
+            background-color: var(--white);
+            color: var(--blackblue);
+        }
     }
 }
