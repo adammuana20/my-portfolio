@@ -17,8 +17,9 @@ $main-color: black;
 
   .form-input {
     background: none;
-    background-color: rgb(1, 22, 39);
-    color: var(--white);
+    // rgb(1, 22, 39)
+    background-color: var(--icewhite);
+    color: var(--black);
     font-size: 18px;
     padding: .8rem;
     display: block;
@@ -44,7 +45,7 @@ $main-color: black;
   }
 
   .form-input-label {
-    color: var(--white);
+    color: var(--black);
     font-size: 1.2rem;
     font-weight: normal;
     position: absolute;

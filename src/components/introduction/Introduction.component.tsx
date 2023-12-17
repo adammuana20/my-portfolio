@@ -5,13 +5,16 @@ import avatarContainer from '../../assets/images/avatar-container.png'
 
 import './Introduction.styles.scss'
 import { useLazyAnimation, useSectionInView } from "../../library/hooks"
+import { useTheme } from "../../contexts/Theme.context"
 
 const Introduction = () => {
   const { ref: refSection } = useSectionInView('Home')
   const { ref: refAnimation, inView } = useLazyAnimation();
+
+  const { theme } = useTheme()
   
   return (
-    <section className='introduction-container' id='home' ref={refSection}>
+    <section className={`introduction-container ${theme === 'dark' ? 'dark-intro' : '' }`} id='home' ref={refSection}>
       <div className={`information ${inView ? 'show' : ''}`} ref={refAnimation}>
           <div className="text">
             <h2>Hello, I'm</h2>

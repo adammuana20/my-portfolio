@@ -13,15 +13,17 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import './Projects.styles.scss'
+import { useTheme } from '../../contexts/Theme.context';
 
 
 const Projects = () => {
     const { ref: refSection } = useSectionInView('Projects')
     const { ref: refAnimation, inView } = useLazyAnimation();
+    const { theme } = useTheme()
 
     return (
         <>
-            <section className='projects-container' id='projects' ref={refSection}>
+            <section className={`projects-container ${theme === 'dark' ? 'dark-section' : ''}`} id='projects' ref={refSection}>
                 <div className={`section-title-container ${inView ? 'show' : ''}`} ref={refAnimation}>
                     <img src={titleBox} alt='Title' />
                     <h2 className='section-title'>PROJECTS</h2>

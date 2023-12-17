@@ -7,6 +7,7 @@ import { useScreenSize } from '../../library/hooks';
 import { useActiveSectionContext } from '../../contexts/ActiveSection.context';
 
 import './Navbar.styles.scss'
+import { useTheme } from '../../contexts/Theme.context';
 
 
 type CustomNavLinkProps = {
@@ -17,7 +18,7 @@ type CustomNavLinkProps = {
 
 const Navbar = () => {
   const { isMobile, isSticky, setIsSticky } = useScreenSize()
-
+  const { theme } = useTheme()
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext()  
 
   useEffect(() => {
@@ -67,7 +68,11 @@ const Navbar = () => {
     <>
       <ScrollToAnchor />
       { !isMobile && (
-        <nav className={`desktop-container ${isSticky && !isMobile ? 'sticky' : ''}`}>
+        <nav className={`desktop-container 
+            ${isSticky && !isMobile ? 'sticky' : ''}
+            ${theme === 'dark' ? 'dark-navbar' : ''}
+          `}
+        >
           { navLinks.map((link, idx) => {
               return(
                 <CustomNavLink 
@@ -97,7 +102,10 @@ const Navbar = () => {
         </nav>
       )}
       { isMobile &&
-        <nav className={`mobile-container `}>
+        <nav className={`mobile-container 
+            ${theme === 'dark' ? 'dark-navbar' : ''}
+          `}
+        >
           { navLinks.map((link, idx) => {
               return(
                 <CustomNavLink 

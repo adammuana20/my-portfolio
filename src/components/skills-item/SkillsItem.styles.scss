@@ -2,7 +2,7 @@
 .skills-data-container {
     width: 100%;
     padding: 1.5rem 3rem 2.5rem;
-    background-color: var(--blackblue);
+    background-color: var(--icewhite);
     border: 3px solid var(--semidarkblue);
     border-radius: 1rem;
     transition: all .5s;
@@ -31,12 +31,12 @@
 .skill-icon {
   cursor: pointer;
   display: flex;
-  border: 1px solid;
+  border: 2px solid;
   border-radius: 1rem;
   padding: 1.4rem;
   align-items: center;
   text-align: center;
-  background-color: var(--darkblue);
+
   flex-direction: column;
   gap: .5rem;
 

@@ -9,6 +9,7 @@ import titleBox from '../../assets/images/section-title.png'
 
 import './Contact.styles.scss'
 import Button from '../button/Button.component';
+import { useTheme } from '../../contexts/Theme.context';
 
 const defaultFormFields = {
     name: '',
@@ -22,6 +23,7 @@ const Contact = () => {
     const [cursorBlink, setCursorBlink] = useState<boolean>(true);
     const [lastUpdatedField, setLastUpdatedField] = useState<string | null>(null)
     const { ref: refAnimation, inView } = useLazyAnimation();
+    const { theme } = useTheme()
 
     const [formFields, setFormFields] = useState(defaultFormFields)
     const { name, email, subject, message } = formFields
@@ -102,7 +104,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
 \``;
 
     return (
-        <section className='contact-container' id='contact' ref={ref}>
+        <section className={`contact-container ${theme === 'dark' ? 'dark-section' : ''}`} id='contact' ref={ref}>
             <div className={`section-title-container ${inView ? 'show' : ''}`} ref={refAnimation}>
                 <img src={titleBox} alt='Title' />
                 <h2 className='section-title'>CONTACT</h2>

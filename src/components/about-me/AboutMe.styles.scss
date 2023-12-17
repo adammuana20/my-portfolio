@@ -46,6 +46,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2.5rem;
+    color: #fff;
   }
 
   @media only screen and (max-width: 799px) {
@@ -134,4 +135,32 @@
 
 .show {
   opacity: 1;
+}
+
+.dark-section {
+  color: #fff;
+  .cube-wrapper .cube .cube-face {
+    background-color: var(--blackblue);
+    color: #fff;
+  }
+
+  .skills-data-container {
+    background-color: var(--blackblue);
+  }
+
+  .skill-icon {
+    background-color: var(--darkblue);
+  }
+
+  .slider {
+    background-color: var(--blackblue);
+  }
+
+  .group .form-input {
+    background-color: var(--blackblue);
+  }
+
+  .group .form-input-label {
+    color: var(--white);
+  }
 }
