@@ -7,13 +7,15 @@ import { skillsDataCMS, skillsDataDesign, skillsDataWeb } from '../../library/da
 import { useLazyAnimation, useSectionInView } from '../../library/hooks'
 
 import './Skills.styles.scss'
+import { useTheme } from '../../contexts/Theme.context';
 
 const Skills = () => {
   const { ref: refSection } = useSectionInView('Skills')
   const { ref: refAnimation, inView } = useLazyAnimation();
+  const { theme } = useTheme();
 
   return (
-    <section className='skills-container' id='skills' ref={refSection}>
+    <section className={`skills-container ${theme === 'dark' ? 'dark-section' : ''}`} id='skills' ref={refSection}>
     <div className={`section-title-container ${inView ? 'show' : ''}`} ref={refAnimation}>
       <img src={titleBox} alt='Title' />
       <h2 className='section-title'>SKILLS</h2>

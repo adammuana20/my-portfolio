@@ -20,7 +20,7 @@ const ThemeSwitch = () => {
   return (
     <div className={`tooltip 
             ${isTooltipVisible ? 'tooltip-height' : '' }
-            ${isMobile ? 'top': 'bottom'}
+            ${isMobile ? 'top-tooltip': 'bottom-tooltip'}
         `} 
         onMouseEnter={() => setIsTooltipVisible(true)}
         onMouseLeave={() => setIsTooltipVisible(false)}
@@ -31,7 +31,7 @@ const ThemeSwitch = () => {
             onClick={toggleTheme}
             className={`tooltip-btn 
                 ${theme === 'dark' ? 'dark-mode' : ''}
-                ${isMobile ? 'top': 'bottom'}
+                ${isMobile ? 'top-tooltip': 'bottom-tooltip'}
             `}
         >
             { theme === 'light' ? <BsSun /> : <BsMoon/> }
@@ -41,7 +41,7 @@ const ThemeSwitch = () => {
                 ${theme === 'dark' ? 'dark-mode' : ''}
                 ${isTooltipVisible && !isMobile ? 'tooltip-bottom-show' : 
                     isTooltipVisible && isMobile ? 'tooltip-top-show': 'tooltip-hide'}
-                ${isMobile ? 'top': 'bottom'}
+                ${isMobile ? 'top-tooltip': 'bottom-tooltip'}
             `}
         >
             <Link
@@ -57,7 +57,7 @@ const ThemeSwitch = () => {
                 ${theme === 'dark' ? 'dark-mode' : ''}
                 ${isTooltipVisible && !isMobile ? 'tooltip-bottom-show' : 
                     isTooltipVisible && isMobile ? 'tooltip-top-show': 'tooltip-hide'}
-                ${isMobile ? 'top': 'bottom'}
+                ${isMobile ? 'top-tooltip': 'bottom-tooltip'}
             `}
         >
             <Link
@@ -73,7 +73,7 @@ const ThemeSwitch = () => {
                 ${theme === 'dark' ? 'dark-mode' : ''}
                 ${isTooltipVisible && !isMobile ? 'tooltip-bottom-show' : 
                     isTooltipVisible && isMobile ? 'tooltip-top-show': 'tooltip-hide'}
-                ${isMobile ? 'top': 'bottom'}
+                ${isMobile ? 'top-tooltip': 'bottom-tooltip'}
             `}
         >
             <Link

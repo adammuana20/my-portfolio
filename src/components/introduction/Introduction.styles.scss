@@ -26,24 +26,26 @@
 
 .information {
   position: relative;
-  background-color: var(--blackblue);
+  background-color: var(--icewhite);
   padding-block: 4rem;
   width: 65%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 3px solid var(--semidarkblue);
+  // border: 3px solid var(--orange);
   border-radius: 1rem;
   margin-inline: 1rem;
 
-  opacity: 0;
-  transition: all 1s;
+  border: 3px solid var(--semidarkblue);
 
   &:hover {
     border-color: var(--lightblue);
     box-shadow: 0 0 60px rgba(120, 204, 226, 0.8);
   }
+
+  opacity: 0;
+  transition: all 1s;
 
   .text {
     padding-bottom: 2.5rem;
@@ -176,7 +178,7 @@
 } 
 
 .glitch:after { 
-  color: #fff; 
+  color: #000; 
   animation: glitch3 2.5s infinite; 
   -moz-animation: glitch3 2.5s infinite;
   -webkit-animation: glitch3 2.5s infinite; 
@@ -311,4 +313,16 @@
 
 .show {
   opacity: 1;
+}
+
+.dark-intro {
+  color: #fff;
+
+  .glitch::after {
+    color: #fff;
+  }
+
+  .information {
+    background-color: var(--blackblue);
+  }
 }

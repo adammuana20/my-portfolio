@@ -4,6 +4,7 @@ import Cube from '../cube/Cube.component';
 
 import { aboutMe } from '../../library/data';
 import { useLazyAnimation, useScreenSize, useSectionInView } from '../../library/hooks';
+import { useTheme } from '../../contexts/Theme.context';
 
 import rotateMe from '../../assets/images/rotate-me.png'
 import titleBox from '../../assets/images/section-title.png'
@@ -11,13 +12,15 @@ import titleBox from '../../assets/images/section-title.png'
 import './AboutMe.styles.scss'
 
 
+
 const AboutMe = () => {
   const { ref: refSection } = useSectionInView("About Me");
   const { ref: refAnimation, inView } = useLazyAnimation();
   const { isMobile } = useScreenSize()
+  const { theme } = useTheme()
 
   return (
-    <section className='about-me-container' id='about-me' ref={refSection}>
+    <section className={`about-me-container ${theme === 'dark' ? 'dark-section': ''}`} id='about-me' ref={refSection}>
       <div className={`section-title-container ${inView ? 'show' : ''}`} ref={refAnimation}>
         <img src={titleBox} alt='Title' />
         <h2 className='section-title'>ABOUT ME</h2>
