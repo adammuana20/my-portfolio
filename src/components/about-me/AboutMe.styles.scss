@@ -1,5 +1,3 @@
-@import url('../../global.styles.scss');
-
 .about-me-container {
     min-height: 50rem;
     padding-top: 6rem;
@@ -7,6 +5,10 @@
     padding-inline: 1rem;
     max-width: 1500px;
     margin: 0 auto;
+
+    @media only screen and (max-width: 799px) {
+      padding-top: 4.5rem;
+    }
 }
 
 .cube-section {
@@ -31,7 +33,7 @@
 .section-title-container {
   position: relative;
   width: 30rem;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 
   opacity: 0;
   transition: all 1s;
@@ -112,7 +114,7 @@
 
   @media only screen and (max-width: 500px) {
     .rotate-me {
-      right: -9%;
+      right: -5%;
       top: -18%;
     }
   }
@@ -139,6 +141,7 @@
 
 .dark-section {
   color: #fff;
+  
   .cube-wrapper .cube .cube-face {
     background-color: var(--blackblue);
     color: #fff;

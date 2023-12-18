@@ -56,9 +56,6 @@ const Footer = () => {
               </Popup>
             ))} 
           </div>
-          <div className="disclaimer">
-            About this website: built with React JS (App Router & Server Actions), Typescript, SCSS, Framer Motion, React Hook Form & Nodemailer (Serverless), Netlify Hosting
-          </div>
           <div className="social-icons">
           { footerSocials.map((social: SocialLink, index: number) => (
             <Link
@@ -71,6 +68,9 @@ const Footer = () => {
             </Link>
           ))}
           </div>
+        </div>
+        <div className="disclaimer">
+          About this website: built with React JS (App Router & Server Actions), Typescript, SCSS, Framer Motion, React Hook Form & Nodemailer (Serverless), Netlify Hosting
         </div>
       </div>
     </footer>
