@@ -38,7 +38,6 @@ const Projects = () => {
                         autoplay={{
                             delay: 4000,
                             pauseOnMouseEnter: true,
-                            disableOnInteraction: true,
                         }}
                         pagination={{
                             clickable: true,

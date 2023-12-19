@@ -33,6 +33,7 @@ const AboutMe = () => {
           <Cube index='front' size={isMobile ? 350 : 500}>
             { aboutMe.map((about, idx) => (
                 <div className={`face`} key={idx}>
+                  <h3>{about.face.toUpperCase()}</h3>
                   <p>{about.description.split('\n').map((line, lineIndex) => (
                   <React.Fragment key={lineIndex}>
                     {line}
