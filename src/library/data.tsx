@@ -92,7 +92,7 @@ export const projectsData = [
         { name: "Firebase", icon: firebaseIcon },
         { name: "Tailwind", icon: tailwindcssIcon },
         { name: "Typescript", icon: tsIcon },
-        { name: "Material UI", icon: materialUI },
+        // { name: "Material UI", icon: materialUI },
       ],
       image: tastyMockup, 
       deploymenturl: "https://jolly-sunshine-9cadfb.netlify.app/",
