@@ -1,6 +1,7 @@
 import { InputHTMLAttributes, FC } from 'react'
 
 import './FormInput.styles.scss'
+import { useTheme } from '../../contexts/Theme.context';
 
 type FormInputProps = {
     form: string;
@@ -20,8 +21,10 @@ type FormInputProps = {
 
 
 const FormInput: FC<FormInputProps> = ({ label, form, inputOptions }) => {
+    const { theme } = useTheme()
+
     return (
-        <div className='group'>
+        <div className={`group ${theme === 'dark' ? 'dark-input' : ''}`}>
             { form === 'input' ?(
                     <>
                         <input className='form-input' {...inputOptions} />

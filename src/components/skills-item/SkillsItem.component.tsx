@@ -17,15 +17,17 @@ type SkillCategory = {
   
 type SkillSectionProps = {
     skillsData: readonly SkillCategory[];
-    // theme: "dark" | "light";
 }
 
 const SkillsItem: FC<SkillSectionProps> = ({ skillsData }) => {
     const { theme } = useTheme()
 
     const getSkillIconSrc = (skill: Skill) => {
-        if ( theme === 'dark' &&
-            skill.title.includes("Express") || skill.title.includes("Adobe Photoshop")) {
+        if ( theme === 'dark' 
+            && (skill.title.includes("Express") 
+            || skill.title.includes("Adobe Photoshop")
+            || skill.title.includes("React Router"))
+        ) {
           return skill.icon[1];
         }  else {
           return skill.icon[0];
@@ -34,7 +36,7 @@ const SkillsItem: FC<SkillSectionProps> = ({ skillsData }) => {
 
     const getSkillColor = (skill: Skill) => {
         if ( theme === 'dark' &&
-            skill.title.includes("Express") || skill.title.includes("Adobe Photoshop")) {
+            (skill.title.includes("Express") || skill.title.includes("Adobe Photoshop"))) {
             return skill.color[1];
         } else {
             return skill.color[0];

@@ -17,6 +17,11 @@ import photoshopIcon from '../assets/icons/adobephotoshopicon.svg'
 import photoshopIconLight from '../assets/icons/adobephotoshopiconwhite.svg'
 import sitecoreIcon from '../assets/icons/sitecoreicon.svg'
 import styledcomponentsIcon from '../assets/icons/styledcomponentsicon.svg'
+import firebaseIcon from '../assets/icons/firebase-icon.svg'
+import chartJSIcon from '../assets/icons/chartjs.svg'
+import reactRouter from '../assets/icons/react-router.svg'
+import reactRouterWhite from '../assets/icons/react-router-white.svg'
+import materialUI from '../assets/icons/material-ui.svg'
 
 import tastyMockup from '../assets/images/tasty_mockup.webp'
 
@@ -47,110 +52,60 @@ export const aboutMe = [
 ] as const;
 
 export const projectsData = [
-    {
-        title: "Perhaps Manila",
-        description:
-        "Card 1",
-        technologies: [
-            { name: "HTML", icon: htmlIcon },
-            { name: "CSS", icon: cssIcon },
-            { name: "JavaScript", icon: jsIcon },
-            { name: "REST Api", icon: apiIcon },
-            { name: "React", icon: reactIcon },
-            { name: "Figma", icon: figmaIcon },
-            { name: "Canva", icon: canvaIcon },
-            { name: "Netlify", icon: netlifyIcon },
-        ],
-        image: tastyMockup,
-        deploymenturl: "https://jolly-sunshine-9cadfb.netlify.app/",
-        githuburl: "https://github.com/adammuana20/crown-clothing",
-        githubicon: FiGithub,
-        deploymenticon: FiLink,
-        colors: {
-            main: "main-btn",
-            second: "secondary-btn",
-            icon: "white",
-            projectcolor: "#70B9BE",
-        },
-    },
-    {
-        title: "Perhaps Manila",
-        description:
-        "Card 2",
-        technologies: [
-            { name: "HTML", icon: htmlIcon },
-            { name: "CSS", icon: cssIcon },
-            { name: "JavaScript", icon: jsIcon },
-            { name: "REST Api", icon: apiIcon },
-            { name: "React", icon: reactIcon },
-            { name: "Figma", icon: figmaIcon },
-            { name: "Canva", icon: canvaIcon },
-            { name: "Netlify", icon: netlifyIcon },
-        ],
-        image: tastyMockup,
-        deploymenturl: "https://jolly-sunshine-9cadfb.netlify.app/",
-        githuburl: "https://github.com/adammuana20/crown-clothing",
-        githubicon: FiGithub,
-        deploymenticon: FiLink,
-        colors: {
-            main: "main-btn",
-            second: "secondary-btn",
-            icon: "white",
-            projectcolor: "#70B9BE",
-        },
-    },
-    {
-        title: "Perhaps Manila",
-        description:
-        "Card 3",
-        technologies: [
-            { name: "HTML", icon: htmlIcon },
-            { name: "CSS", icon: cssIcon },
-            { name: "JavaScript", icon: jsIcon },
-            { name: "REST Api", icon: apiIcon },
-            { name: "React", icon: reactIcon },
-            { name: "Figma", icon: figmaIcon },
-            { name: "Canva", icon: canvaIcon },
-            { name: "Netlify", icon: netlifyIcon },
-        ],
-        image: tastyMockup,
-        deploymenturl: "https://jolly-sunshine-9cadfb.netlify.app/",
-        githuburl: "https://github.com/adammuana20/crown-clothing",
-        githubicon: FiGithub,
-        deploymenticon: FiLink,
-        colors: {
-            main: "main-btn",
-            second: "secondary-btn",
-            icon: "white",
-            projectcolor: "#70B9BE",
-        },
-    },
-    {
-        title: "Perhaps Manila",
-        description:
-        "Card 4",
-        technologies: [
-            { name: "HTML", icon: htmlIcon },
-            { name: "CSS", icon: cssIcon },
-            { name: "JavaScript", icon: jsIcon },
-            { name: "REST Api", icon: apiIcon },
-            { name: "React", icon: reactIcon },
-            { name: "Figma", icon: figmaIcon },
-            { name: "Canva", icon: canvaIcon },
-            { name: "Netlify", icon: netlifyIcon },
-        ],
-        image: tastyMockup,
-        deploymenturl: "https://jolly-sunshine-9cadfb.netlify.app/",
-        githuburl: "https://github.com/adammuana20/crown-clothing",
-        githubicon: FiGithub,
-        deploymenticon: FiLink,
-        colors: {
-            main: "main-btn",
-            second: "secondary-btn",
-            icon: "white",
-            projectcolor: "#70B9BE",
-        },
-    },
+  {
+      title: "Perhaps Manila",
+      description:
+      "E-commerce platform where style meets simplicity! Our clothing brand offers a curated selection for everyone. With features like adding favorites, seamless payments via Stripe, and tracking orders, shopping has never been easier. Experience convenience and fashion-forward choices with us.",
+      technologies: [
+        { name: "React", icon: reactIcon },
+        { name: "React Router", icon: reactRouter },
+        { name: "REST Api", icon: apiIcon },
+        { name: "Figma", icon: figmaIcon },
+        { name: "Netlify", icon: netlifyIcon },
+        { name: "Firebase", icon: firebaseIcon },
+        { name: "Styled Components", icon: styledcomponentsIcon },
+        { name: "Typescript", icon: tsIcon },
+      ],
+      image: tastyMockup,
+      deploymenturl: "https://jolly-sunshine-9cadfb.netlify.app/",
+      githuburl: "https://github.com/adammuana20/crown-clothing",
+      githubicon: FiGithub,
+      deploymenticon: FiLink,
+      colors: {
+          main: "main-btn",
+          second: "secondary-btn",
+          icon: "white",
+          projectcolor: "#70B9BE",
+      },
+  },
+  {
+      title: "Vanlife",
+      description:
+      "Global van reservation platform, where adventure knows no bounds! Whether you're a traveler seeking the perfect ride or a van owner looking to share your wheels, we've got you covered. With seamless online reservations and the power of Chart.js for insightful data visualization, embark on your next journey with ease and confidence.",
+      technologies: [
+        { name: "React", icon: reactIcon },
+        { name: "React Router", icon: reactRouter },
+        { name: "Chart JS", icon: chartJSIcon },
+        { name: "REST Api", icon: apiIcon },
+        { name: "Canva", icon: canvaIcon },
+        { name: "Netlify", icon: netlifyIcon },
+        { name: "Firebase", icon: firebaseIcon },
+        { name: "Tailwind", icon: tailwindcssIcon },
+        { name: "Typescript", icon: tsIcon },
+        { name: "Material UI", icon: materialUI },
+      ],
+      image: tastyMockup, 
+      deploymenturl: "https://jolly-sunshine-9cadfb.netlify.app/",
+      githuburl: "https://github.com/adammuana20/crown-clothing",
+      githubicon: FiGithub,
+      deploymenticon: FiLink,
+      colors: {
+          main: "main-btn",
+          second: "secondary-btn",
+          icon: "white",
+          projectcolor: "#70B9BE",
+      },
+  },
 ] as const;
 
 export const FooterLinks = [
@@ -211,6 +166,12 @@ export const skillsDataWeb = [
           color: ["#61DAFB"],
         },
         {
+          title: "React Router",
+          hash: "#ReactRouter",
+          icon: [reactRouter, reactRouterWhite],
+          color: ["#D0021B"],
+        },
+        {
           title: "Node.js",
           hash: "#Node.js",
           icon: [nodejsIcon],
@@ -251,7 +212,7 @@ export const skillsDataWeb = [
         { title: "Figma", hash: "#Figma", icon: [figmaIcon], color: ["#F24E1E"] },
         { 
           title: "Adobe Photoshop", 
-          hash: "#Adobe Photoshop", 
+          hash: "#AdobePhotoshop", 
           icon: [photoshopIcon, photoshopIconLight],
           color: ["#001E36", "#31A8FF"],
         },
