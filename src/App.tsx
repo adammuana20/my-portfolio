@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Spinner from './components/spinner/Spinner.component'
 const Home = lazy(() => import('./pages/Home.component'))
+const NotFound = lazy(() => import('./pages/not-found/404'))
 
 function App() {
 
@@ -10,7 +11,10 @@ function App() {
     <Suspense fallback={<Spinner />}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/'>
+            <Route index element={<Home />}/>
+            <Route path='*' element={<NotFound />}/>
+          </Route>
         </Routes>
       </BrowserRouter>
     </Suspense>
