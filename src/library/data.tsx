@@ -21,9 +21,10 @@ import firebaseIcon from '../assets/icons/firebase-icon.svg'
 import chartJSIcon from '../assets/icons/chartjs.svg'
 import reactRouter from '../assets/icons/react-router.svg'
 import reactRouterWhite from '../assets/icons/react-router-white.svg'
-import materialUI from '../assets/icons/material-ui.svg'
+// import materialUI from '../assets/icons/material-ui.svg'
 
-import tastyMockup from '../assets/images/tasty_mockup.webp'
+import perhapsManila from '../assets/images/prhps-mnl.jpg'
+import vanlife from '../assets/images/vanlife.jpg'
 
 import Privacy from '../components/privacy/Privacy.component'
 import Imprint from '../components/imprint/Imprint.component'
@@ -66,7 +67,7 @@ export const projectsData = [
         { name: "Styled Components", icon: styledcomponentsIcon },
         { name: "Typescript", icon: tsIcon },
       ],
-      image: tastyMockup,
+      image: perhapsManila,
       deploymenturl: "https://jolly-sunshine-9cadfb.netlify.app/",
       githuburl: "https://github.com/adammuana20/crown-clothing",
       githubicon: FiGithub,
@@ -94,7 +95,7 @@ export const projectsData = [
         { name: "Typescript", icon: tsIcon },
         // { name: "Material UI", icon: materialUI },
       ],
-      image: tastyMockup, 
+      image: vanlife, 
       deploymenturl: "https://jolly-sunshine-9cadfb.netlify.app/",
       githuburl: "https://github.com/adammuana20/crown-clothing",
       githubicon: FiGithub,
