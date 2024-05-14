@@ -82,14 +82,14 @@ const Projects = () => {
                                         />
                                     </div>
                                 </div>
-                                {/* <div className="mockup-container">
+                                <div className="mockup-container">
                                     <h2 className='mobile-project-title'>{project.title}</h2>
                                     <img
                                     src={project.image}
                                     alt={`${project.title}-project-mockup`}
                                     className={`mockup`}
                                     />
-                                </div> */}
+                                </div>
                             </SwiperSlide>
                         ))
                         }        
