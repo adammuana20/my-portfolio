@@ -187,12 +187,11 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                     />
                     <div className='form-btn'>
                     <Button
-                        value={`Send`}
+                        label={`Send`}
                         iconSVG={CiMail}
                         buttoncolor={'main-btn'}
                         iconcolor={`#fff`}
                         type="submit"
-                        elementType="input"
                     />
                     </div>
                 </form>
