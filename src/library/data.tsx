@@ -96,8 +96,8 @@ export const projectsData = [
         // { name: "Material UI", icon: materialUI },
       ],
       image: vanlife, 
-      deploymenturl: "https://jolly-sunshine-9cadfb.netlify.app/",
-      githuburl: "https://github.com/adammuana20/crown-clothing",
+      deploymenturl: "https://main--thriving-faloodeh-59be10.netlify.app/",
+      githuburl: "https://github.com/adammuana20/vanlife",
       githubicon: FiGithub,
       deploymenticon: FiLink,
       colors: {
