@@ -24,7 +24,7 @@ const Introduction = () => {
             sequence={[
               'Front-end Developer', 1000,
               'CMS Developer', 1000,
-              'UI/UX Designer', 1000,
+              'Web Developer', 1000,
               'Online Gamer 😃', 1000,
             ]}
             wrapper="div"
