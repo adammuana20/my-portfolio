@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import './Button.styles.scss'
+import "./Button.styles.scss";
 
-interface ButtonProps {
+type ButtonProps = {
   onClick?: () => void;
   label?: string;
   value?: string;
@@ -14,8 +14,8 @@ interface ButtonProps {
   buttoncolor?: string;
   buttonhovercolor?: string;
   type?: "button" | "submit" | "reset";
-  elementType?: "input" | "button";
-}
+  elementType?: "input" | "button" | "submit";
+};
 
 const Button: React.FC<ButtonProps> = ({
   onClick,
@@ -36,6 +36,21 @@ const Button: React.FC<ButtonProps> = ({
 
   if (elementType === "input") {
     return <input {...commonProps} value={value}></input>;
+  } else if (elementType === "submit") {
+    return (
+      <button {...commonProps}>
+        {IconSVGComponent ? (
+          <IconSVGComponent className={"icon-svg"} />
+        ) : (
+          <img
+            src={buttoncolor || ""}
+            alt={`${label}-icon`}
+            className={`${buttoncolor || ""} `}
+          />
+        )}
+        {label}
+      </button>
+    );
   } else {
     return (
       <Link to={link || ""}>
