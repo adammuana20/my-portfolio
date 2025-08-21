@@ -21,10 +21,16 @@ import firebaseIcon from "../assets/icons/firebase-icon.svg";
 import chartJSIcon from "../assets/icons/chartjs.svg";
 import reactRouter from "../assets/icons/react-router.svg";
 import reactRouterWhite from "../assets/icons/react-router-white.svg";
+import renderIcon from "../assets/icons/RenderBlack.png";
+// import renderIconWhite from "../assets/icons/RenderWhite.png";
+import mongoDbIcon from "../assets/icons/mongodbicon.svg";
+import hostingerIcon from "../assets/icons/hostinger.svg";
 // import materialUI from '../assets/icons/material-ui.svg'
 
 import perhapsManila from "../assets/images/prhps-mnl.jpg";
 import vanlife from "../assets/images/vanlife.jpg";
+import jobify from "../assets/images/jobify.png";
+import dentistApp from "../assets/images/dentist-app.png";
 
 import Privacy from "../components/privacy/Privacy.component";
 import Imprint from "../components/imprint/Imprint.component";
@@ -92,8 +98,8 @@ export const projectsData = [
     ],
     image: perhapsManila,
     deploymenturl: "https://perhaps-manila.netlify.app/",
-    githuburl: "https://github.com/adammuana20/crown-clothing",
-    githubicon: FiGithub,
+    // githuburl: "https://github.com/adammuana20/crown-clothing",
+    // githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
       main: "main-btn",
@@ -120,8 +126,63 @@ export const projectsData = [
     ],
     image: vanlife,
     deploymenturl: "https://travel-van.netlify.app/",
-    githuburl: "https://github.com/adammuana20/vanlife",
-    githubicon: FiGithub,
+    // githuburl: "https://github.com/adammuana20/vanlife",
+    // githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  },
+  {
+    title: "Jobify",
+    description:
+      "A MERN stack web application for browsing and posting job opportunities. Features user authentication, job search filters, and a responsive interface for employers and job seekers.",
+    technologies: [
+      { name: "React", icon: reactIcon },
+      { name: "React Router", icon: reactRouter },
+      { name: "REST Api", icon: apiIcon },
+      { name: "Figma", icon: figmaIcon },
+      { name: "Express", icon: expressIcon },
+      { name: "Node JS", icon: nodejsIcon },
+      { name: "Mongo DB", icon: mongoDbIcon },
+      { name: "Tailwind", icon: tailwindcssIcon },
+      { name: "Render", icon: renderIcon },
+      { name: "Typescript", icon: tsIcon },
+    ],
+    image: jobify,
+    deploymenturl: "https://jobify-jf0q.onrender.com/",
+    // githuburl: "https://github.com/adammuana20/crown-clothing",
+    // githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  },
+  {
+    title: "The Clinic",
+    description:
+      "A dental clinic app with a React.js frontend and WordPress backend. Patients can book appointments, track treatments, and make payments, while dentists manage schedules, procedures, and billing. Designed for a smooth, responsive experience and easy clinic management.",
+    technologies: [
+      { name: "React", icon: reactIcon },
+      { name: "React Router", icon: reactRouter },
+      { name: "REST Api", icon: apiIcon },
+      { name: "Figma", icon: figmaIcon },
+      { name: "Wordpress", icon: wordpressIcon },
+      { name: "Hostinger", icon: hostingerIcon },
+      { name: "Tailwind", icon: tailwindcssIcon },
+      { name: "Netlify", icon: netlifyIcon },
+      { name: "Typescript", icon: tsIcon },
+    ],
+    image: dentistApp,
+    deploymenturl: "https://ak-clinic.netlify.app/auth/signin",
+    // githuburl: "https://github.com/adammuana20/crown-clothing",
+    // githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
       main: "main-btn",
@@ -178,12 +239,6 @@ export const skillsDataWeb = [
         color: ["#F7DF1E"],
       },
       {
-        title: "TypeScript",
-        hash: "#TypeScript",
-        icon: [tsIcon],
-        color: ["#007ACC"],
-      },
-      {
         title: "React",
         hash: "#React",
         icon: [reactIcon],
@@ -196,22 +251,16 @@ export const skillsDataWeb = [
         color: ["#D0021B"],
       },
       {
-        title: "Node.js",
-        hash: "#Node.js",
-        icon: [nodejsIcon],
-        color: ["#339933"],
+        title: "TypeScript",
+        hash: "#TypeScript",
+        icon: [tsIcon],
+        color: ["#007ACC"],
       },
       {
         title: "Tailwind",
         hash: "#Tailwind",
         icon: [tailwindcssIcon],
         color: ["#38B2AC"],
-      },
-      {
-        title: "Express",
-        hash: "#Express",
-        icon: [expressIcon, expressIconWhite],
-        color: ["#000000", "#FFFFFF"],
       },
       {
         title: "SASS/SCSS",
@@ -224,6 +273,24 @@ export const skillsDataWeb = [
         hash: "#StyledComponents",
         icon: [styledcomponentsIcon],
         color: ["#ff72b8"],
+      },
+      {
+        title: "Mongo DB",
+        hash: "#MongoDB",
+        icon: [mongoDbIcon],
+        color: ["#339933"],
+      },
+      {
+        title: "Node.js",
+        hash: "#Node.js",
+        icon: [nodejsIcon],
+        color: ["#3C873A"],
+      },
+      {
+        title: "Express",
+        hash: "#Express",
+        icon: [expressIcon, expressIconWhite],
+        color: ["#000000", "#FFFFFF"],
       },
     ],
   },
