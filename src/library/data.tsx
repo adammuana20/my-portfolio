@@ -29,7 +29,7 @@ import hostingerIcon from "../assets/icons/hostinger.svg";
 
 import perhapsManila from "../assets/images/prhps-mnl.jpg";
 import vanlife from "../assets/images/vanlife.jpg";
-import jobify from "../assets/images/jobify.png";
+import jobifyImg from "../assets/images/jobify.png";
 import dentistApp from "../assets/images/dentist-app.png";
 
 import Privacy from "../components/privacy/Privacy.component";
@@ -152,7 +152,7 @@ export const projectsData = [
       { name: "Render", icon: renderIcon },
       { name: "Typescript", icon: tsIcon },
     ],
-    image: jobify,
+    image: jobifyImg,
     deploymenturl: "https://jobify-jf0q.onrender.com/",
     // githuburl: "https://github.com/adammuana20/crown-clothing",
     // githubicon: FiGithub,
