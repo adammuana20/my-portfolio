@@ -55,6 +55,8 @@ const Contact = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setFormFields(defaultFormFields);
+
     toast.success(
       "Thank you for your email. I will get back to you as soon as possible"
     );

@@ -51,12 +51,12 @@ export const navLinks = [
 export const aboutMe = [
   {
     description:
-      "Hi, I'm Adam Clint P. Muaña, a graduate in Information Technology from FEU Diliman.\n\nPassionate about technology and problem-solving, I've acquired valuable programming and system development skills during my academic journey.\n\nI stay updated on the latest tech trends and am excited about contributing to innovative solutions.\n\nLet's connect and explore the possibilities!",
+      "Hi, I'm Adam Clint P. Muaña, a graduate in Information Technology from FEU Diliman.\n\nPassionate about technology and problem-solving, I've acquired valuable programming and system development skills during my academic journey.\n\nI stay updated on the latest tech trends and am excited about contributing to innovative solutions.",
     face: "front",
   },
   {
     description:
-      "I'm a Front End developer from the Philippines.\n\nI create websites with a focus on user experience and responsiveness.\n\nI'm curious to learn more about developing scalable distribution systems, enjoy problem-solving, and prioritize writing maintainable code.\n\nResponsive design ensures your website is accessible to all users, regardless of their devices.",
+      "I'm a Front End developer from the Philippines.\n\nI create websites with a focus on user experience and responsiveness.\n\nResponsive design ensures your website is accessible to all users, regardless of their devices.",
     face: "right",
   },
   {
@@ -76,7 +76,7 @@ export const aboutMe = [
   },
   {
     description:
-      "I proudly own Perhaps Manila, a clothing brand in the Philippines that stands for style, comfort, and individuality.\n\nAs the creative force behind the brand, I manage everything from design concepts to maintaining our website.\n\nCreating a smooth online experience for our customers isn't just a job; it's my passion. I believe in the power of fashion to express identity, and our clothing line reflects that belief.",
+      "I proudly own Perhaps Manila, a clothing brand in the Philippines that stands for style, comfort, and individuality.\n\nAs the creative force behind the brand, I manage everything from design concepts to maintaining our website.\n\nCreating a smooth online experience for our customers isn't just a job; it's my passion.",
     face: "bottom",
   },
 ] as const;
