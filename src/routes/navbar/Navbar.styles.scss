@@ -1,107 +1,110 @@
 .desktop-container {
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
-    padding: 1.5rem 0;
-    height: 55px;
-    max-width: 45rem;
-    margin: 0 auto;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1.5rem 0;
+  height: 55px;
+  max-width: 45rem;
+  margin: 0 auto;
+  align-items: center;
 
-    a {
-        color: #fff;
-    }
-
-    @media only screen and (max-width: 799px) {
-        display: none;
-    }
+  @media only screen and (max-width: 799px) {
+    display: none;
+  }
 }
 
 .link {
-    transition: all .5s ease-in-out;
-    opacity: .5;
-    position: relative;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.5;
+  position: relative;
 
-    .left-bracket { 
-        position: absolute;
-        left: -1rem;
-        top: 0;
-        color: var(--lightblue);
+  .left-bracket {
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    color: var(--lightblue);
 
-        @media only screen and (max-width: 799px) {
-            display: none;
-        }
+    @media only screen and (max-width: 799px) {
+      display: none;
     }
-    
-    .right-bracket { 
-        position: absolute;
-        right: -1rem;
-        top: 0;
-        color: var(--lightblue);
+  }
 
-        @media only screen and (max-width: 799px) {
-            display: none;
-        }
+  .right-bracket {
+    position: absolute;
+    right: -1rem;
+    top: 0;
+    color: var(--lightblue);
+
+    @media only screen and (max-width: 799px) {
+      display: none;
     }
+  }
 }
 
 .hovered {
-    transition: all .2s ease-in-out;
-    opacity: 1;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
 
 .sticky {
-    position: sticky;
-    top: 1.5rem;
-    z-index: 50;
-    margin: 0 auto;
-    width: max-content;
-    padding: 0 2.5rem;
-    transition: all 100ms ease-in-out;
-    border-radius: 9999px;
-    border: none;
-    background-color: rgba(59, 101, 145, .7);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    backdrop-filter: blur(0.5rem);
+  position: sticky;
+  top: 1.5rem;
+  z-index: 50;
+  margin: 0 auto;
+  width: max-content;
+  padding: 0 2.5rem;
+  transition: all 100ms ease-in-out;
+  border-radius: 9999px;
+  border: none;
+  background-color: rgba(59, 101, 145, 0.7);
 
-    @media only screen and (max-width: 799px) {
-        display: none;
-    }
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(0.5rem);
 
-    &.dark-navbar {
-        background-color: rgba(12, 18, 32, .7);
-        border: 1px solid rgba(255, 255, 255, .3);
+  @media only screen and (max-width: 799px) {
+    display: none;
+  }
+
+  &.dark-navbar {
+    background-color: var(--blackblue);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    a {
+      color: #fff;
     }
+  }
 }
 
 .mobile-container {
-    z-index: 50;
+  z-index: 50;
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem 1rem;
+  width: 95%;
+  justify-content: space-between;
+  margin-inline: 2.5%;
+  position: fixed;
+  bottom: 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  background-color: rgba(59, 101, 145, 0.7);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(0.5rem);
+
+  a {
+    color: #fff;
+  }
+
+  .menu-icon {
+    height: 100%;
     display: flex;
-    gap: 2rem;
-    padding: .5rem 1rem;
-    width: 95%;
-    justify-content: space-between;
-    margin-inline: 2.5%;
-    position: fixed;
-    bottom: 1.5rem;
-    border-radius: 9999px;
-    border: none;
-    background-color: rgba(59, 101, 145, .7);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    backdrop-filter: blur(0.5rem);
+    align-items: center;
+  }
 
-    a {
-        color: #fff;
-    }
-
-    .menu-icon {
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    &.dark-navbar {
-        background-color: rgba(12, 18, 32, .7);
-        border: 1px solid rgba(255, 255, 255, .3);
-    }
+  &.dark-navbar {
+    background-color: rgba(12, 18, 32, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
 }

@@ -30,13 +30,13 @@ const Introduction = () => {
         </div>
         <TypeAnimation
           sequence={[
+            "React Developer",
+            1000,
+            "Next.JS Developer",
+            1000,
             "Fullstack Developer",
             1000,
-            "Graphic Designer",
-            1000,
-            "CMS Developer",
-            1000,
-            "Web Developer",
+            "Frontend Developer",
             1000,
             "Online Gamer 😃",
             1000,

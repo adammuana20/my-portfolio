@@ -1,6 +1,9 @@
-import htmlIcon from "../assets/icons/htmlicon.svg";
-import cssIcon from "../assets/icons/cssicon.svg";
-import jsIcon from "../assets/icons/javascripticon.svg";
+import { GoHome } from "react-icons/go";
+import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { CiUser, CiMail } from "react-icons/ci";
+import { FiGithub, FiLink, FiLinkedin } from "react-icons/fi";
+
 import apiIcon from "../assets/icons/apiicon.svg";
 import reactIcon from "../assets/icons/reacticon.svg";
 import figmaIcon from "../assets/icons/figmaicon.svg";
@@ -18,27 +21,33 @@ import photoshopIconLight from "../assets/icons/adobephotoshopiconwhite.svg";
 import sitecoreIcon from "../assets/icons/sitecoreicon.svg";
 import styledcomponentsIcon from "../assets/icons/styledcomponentsicon.svg";
 import firebaseIcon from "../assets/icons/firebase-icon.svg";
-import chartJSIcon from "../assets/icons/chartjs.svg";
+import axiosIcon from "../assets/icons/axiosicon.svg";
 import reactRouter from "../assets/icons/react-router.svg";
 import reactRouterWhite from "../assets/icons/react-router-white.svg";
 import renderIcon from "../assets/icons/RenderBlack.png";
-// import renderIconWhite from "../assets/icons/RenderWhite.png";
 import mongoDbIcon from "../assets/icons/mongodbicon.svg";
 import hostingerIcon from "../assets/icons/hostinger.svg";
-// import materialUI from '../assets/icons/material-ui.svg'
+import nextIcon from "../assets/icons/nextjsicon.svg";
+import nextIconBlack from "../assets/icons/nextjsiconblack.svg";
+import postgresqlIcon from "../assets/icons/postgresqlicon.svg";
+import prismaIcon from "../assets/icons/prismaicon.svg";
+import prismaIconWhite from "../assets/icons/prismaiconwhite.svg";
+import vercelIcon from "../assets/icons/vercelicon.svg";
+import stripeIcon from "../assets/icons/stripeicon.svg";
+import paypalIcon from "../assets/icons/paypalicon.svg";
+import jwtIcon from "../assets/icons/jwticon.svg";
+import reactQueryIcon from "../assets/icons/reactqueryicon.svg";
+import cloudinaryIcon from "../assets/icons/cloudinaryicon.svg";
+import uploadthingIcon from "../assets/icons/uploadthingicon.svg";
 
 import perhapsManila from "../assets/images/prhps-mnl.jpg";
 import vanlife from "../assets/images/vanlife.jpg";
 import jobifyImg from "../assets/images/jobify.png";
 import dentistApp from "../assets/images/dentist-app.png";
+import prostore from "../assets/images/prostore.png";
 
 import Privacy from "../components/privacy/Privacy.component";
 import Imprint from "../components/imprint/Imprint.component";
-import { GoHome } from "react-icons/go";
-import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
-import { AiOutlineFundProjectionScreen } from "react-icons/ai";
-import { CiUser, CiMail } from "react-icons/ci";
-import { FiGithub, FiLink, FiLinkedin } from "react-icons/fi";
 
 export const navLinks = [
   { title: "Home", hash: "#home", icon: GoHome },
@@ -83,21 +92,23 @@ export const aboutMe = [
 
 export const projectsData = [
   {
-    title: "Perhaps Manila",
+    title: "Prostore",
     description:
-      "E-commerce platform where style meets simplicity! Our clothing brand offers a curated selection for everyone. With features like adding favorites, seamless payments via Stripe, and tracking orders, shopping has never been easier. Experience convenience and fashion-forward choices with us.",
+      "A fullstack e-commerce built with Next.js (App Router), TypeScript, and PostgreSQL. Features include authentication, role-based access, Stripe and PayPal integration (test mode), admin dashboard, and scalable backend using Prisma ORM. Implements modern practices such as server actions, form validation, and responsive UI.",
     technologies: [
-      { name: "React", icon: reactIcon },
-      { name: "React Router", icon: reactRouter },
+      { name: "Next.js", icon: nextIconBlack },
       { name: "REST Api", icon: apiIcon },
-      { name: "Figma", icon: figmaIcon },
-      { name: "Netlify", icon: netlifyIcon },
-      { name: "Firebase", icon: firebaseIcon },
-      { name: "Styled Components", icon: styledcomponentsIcon },
+      { name: "Postgres", icon: postgresqlIcon },
+      { name: "Prisma", icon: prismaIcon },
+      { name: "Tailwind", icon: tailwindcssIcon },
       { name: "Typescript", icon: tsIcon },
+      { name: "Stripe", icon: stripeIcon },
+      { name: "PayPal", icon: paypalIcon },
+      { name: "Vercel", icon: vercelIcon },
+      { name: "Uploadthing", icon: uploadthingIcon },
     ],
-    image: perhapsManila,
-    deploymenturl: "https://perhaps-manila.netlify.app/",
+    image: prostore,
+    deploymenturl: "https://prostore-iota-five.vercel.app/",
     // githuburl: "https://github.com/adammuana20/crown-clothing",
     // githubicon: FiGithub,
     deploymenticon: FiLink,
@@ -109,24 +120,24 @@ export const projectsData = [
     },
   },
   {
-    title: "Vanlife",
+    title: "The Dentist",
     description:
-      "Global van reservation platform, where adventure knows no bounds! Whether you're a traveler seeking the perfect ride or a van owner looking to share your wheels, we've got you covered. With seamless online reservations and the power of Chart.js for insightful data visualization, embark on your next journey with ease and confidence.",
+      "A dental clinic app with a React.js frontend and WordPress backend. Patients can book appointments, track treatments, and make payments, while dentists manage schedules, procedures, and billing. Designed for a smooth, responsive experience and easy clinic management.",
     technologies: [
       { name: "React", icon: reactIcon },
-      { name: "React Router", icon: reactRouter },
-      { name: "Chart JS", icon: chartJSIcon },
+      { name: "Axios", icon: axiosIcon },
       { name: "REST Api", icon: apiIcon },
-      { name: "Canva", icon: canvaIcon },
-      { name: "Netlify", icon: netlifyIcon },
-      { name: "Firebase", icon: firebaseIcon },
+      { name: "Figma", icon: figmaIcon },
+      { name: "Wordpress", icon: wordpressIcon },
+      { name: "Hostinger", icon: hostingerIcon },
       { name: "Tailwind", icon: tailwindcssIcon },
+      { name: "Netlify", icon: netlifyIcon },
       { name: "Typescript", icon: tsIcon },
-      // { name: "Material UI", icon: materialUI },
+      { name: "TanStack Query", icon: reactQueryIcon },
     ],
-    image: vanlife,
-    deploymenturl: "https://travel-van.netlify.app/",
-    // githuburl: "https://github.com/adammuana20/vanlife",
+    image: dentistApp,
+    deploymenturl: "https://ak-clinic.netlify.app/auth/signin",
+    // githuburl: "https://github.com/adammuana20/crown-clothing",
     // githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -139,18 +150,18 @@ export const projectsData = [
   {
     title: "Jobify",
     description:
-      "A MERN stack web application for browsing and posting job opportunities. Features user authentication, job search filters, and a responsive interface for employers and job seekers.",
+      "A fullstack application built with MERN stack, featuring JWT authentication, RESTful APIs. It allows users to manage job applications with CRUD functionality, filtering, search, and status tracking (pending, interview, declined). The backend uses Node.js, Express, and MongoDB with Mongoose, while the frontend leverages React and Context API.",
     technologies: [
       { name: "React", icon: reactIcon },
-      { name: "React Router", icon: reactRouter },
-      { name: "REST Api", icon: apiIcon },
-      { name: "Figma", icon: figmaIcon },
       { name: "Express", icon: expressIcon },
       { name: "Node JS", icon: nodejsIcon },
       { name: "Mongo DB", icon: mongoDbIcon },
       { name: "Tailwind", icon: tailwindcssIcon },
       { name: "Render", icon: renderIcon },
       { name: "Typescript", icon: tsIcon },
+      { name: "JWT & Bcrypt", icon: jwtIcon },
+      { name: "TanStack Query", icon: reactQueryIcon },
+      { name: "Cloudinary", icon: cloudinaryIcon },
     ],
     image: jobifyImg,
     deploymenturl: "https://jobify-jf0q.onrender.com/",
@@ -165,22 +176,21 @@ export const projectsData = [
     },
   },
   {
-    title: "The Clinic",
+    title: "Perhaps Manila",
     description:
-      "A dental clinic app with a React.js frontend and WordPress backend. Patients can book appointments, track treatments, and make payments, while dentists manage schedules, procedures, and billing. Designed for a smooth, responsive experience and easy clinic management.",
+      "E-commerce platform where style meets simplicity! Our clothing brand offers a curated selection for everyone. With features like adding favorites, seamless payments via Stripe, and tracking orders, shopping has never been easier. Experience convenience and fashion-forward choices with us.",
     technologies: [
       { name: "React", icon: reactIcon },
       { name: "React Router", icon: reactRouter },
       { name: "REST Api", icon: apiIcon },
-      { name: "Figma", icon: figmaIcon },
-      { name: "Wordpress", icon: wordpressIcon },
-      { name: "Hostinger", icon: hostingerIcon },
-      { name: "Tailwind", icon: tailwindcssIcon },
-      { name: "Netlify", icon: netlifyIcon },
+      { name: "Firebase", icon: firebaseIcon },
+      { name: "Styled Components", icon: styledcomponentsIcon },
       { name: "Typescript", icon: tsIcon },
+      { name: "Stripe", icon: stripeIcon },
+      { name: "Netlify", icon: netlifyIcon },
     ],
-    image: dentistApp,
-    deploymenturl: "https://ak-clinic.netlify.app/auth/signin",
+    image: perhapsManila,
+    deploymenturl: "https://perhaps-manila.netlify.app/",
     // githuburl: "https://github.com/adammuana20/crown-clothing",
     // githubicon: FiGithub,
     deploymenticon: FiLink,
@@ -191,6 +201,34 @@ export const projectsData = [
       projectcolor: "#70B9BE",
     },
   },
+  // {
+  //   title: "Vanlife",
+  //   description:
+  //     "Global van reservation platform, where adventure knows no bounds! Whether you're a traveler seeking the perfect ride or a van owner looking to share your wheels, we've got you covered. With seamless online reservations and the power of Chart.js for insightful data visualization, embark on your next journey with ease and confidence.",
+  //   technologies: [
+  //     { name: "React", icon: reactIcon },
+  //     { name: "React Router", icon: reactRouter },
+  //     { name: "Chart JS", icon: chartJSIcon },
+  //     { name: "REST Api", icon: apiIcon },
+  //     { name: "Canva", icon: canvaIcon },
+  //     { name: "Netlify", icon: netlifyIcon },
+  //     { name: "Firebase", icon: firebaseIcon },
+  //     { name: "Tailwind", icon: tailwindcssIcon },
+  //     { name: "Typescript", icon: tsIcon },
+  //     // { name: "Material UI", icon: materialUI },
+  //   ],
+  //   image: vanlife,
+  //   deploymenturl: "https://travel-van.netlify.app/",
+  //   // githuburl: "https://github.com/adammuana20/vanlife",
+  //   // githubicon: FiGithub,
+  //   deploymenticon: FiLink,
+  //   colors: {
+  //     main: "main-btn",
+  //     second: "secondary-btn",
+  //     icon: "white",
+  //     projectcolor: "#70B9BE",
+  //   },
+  // },
 ] as const;
 
 export const FooterLinks = [
@@ -216,27 +254,15 @@ export const footerSocials = [
   },
 ] as const;
 
-export const skillsDataWeb = [
+export const skillsDataFrontend = [
   {
-    skillsTitle: "Web Development",
+    skillsTitle: "{ Frontend }",
     skills: [
       {
-        title: "HTML",
-        hash: "#html",
-        icon: [htmlIcon],
-        color: ["#F1662A"],
-      },
-      {
-        title: "CSS",
-        hash: "#CSS",
-        icon: [cssIcon],
-        color: ["#1572B6"],
-      },
-      {
-        title: "JavaScript",
-        hash: "#JavaScript",
-        icon: [jsIcon],
-        color: ["#F7DF1E"],
+        title: "TypeScript",
+        hash: "#TypeScript",
+        icon: [tsIcon],
+        color: ["#007ACC"],
       },
       {
         title: "React",
@@ -245,16 +271,16 @@ export const skillsDataWeb = [
         color: ["#61DAFB"],
       },
       {
+        title: "Next.js",
+        hash: "#Next.js",
+        icon: [nextIconBlack, nextIcon],
+        color: ["#000000", "#f3f3f3"],
+      },
+      {
         title: "React Router",
         hash: "#ReactRouter",
         icon: [reactRouter, reactRouterWhite],
         color: ["#D0021B"],
-      },
-      {
-        title: "TypeScript",
-        hash: "#TypeScript",
-        icon: [tsIcon],
-        color: ["#007ACC"],
       },
       {
         title: "Tailwind",
@@ -274,6 +300,14 @@ export const skillsDataWeb = [
         icon: [styledcomponentsIcon],
         color: ["#ff72b8"],
       },
+    ],
+  },
+] as const;
+
+export const skillsDataBackend = [
+  {
+    skillsTitle: "{ Backend }",
+    skills: [
       {
         title: "Mongo DB",
         hash: "#MongoDB",
@@ -292,13 +326,25 @@ export const skillsDataWeb = [
         icon: [expressIcon, expressIconWhite],
         color: ["#000000", "#FFFFFF"],
       },
+      {
+        title: "Postgres",
+        hash: "#Postgres",
+        icon: [postgresqlIcon],
+        color: ["#336791"],
+      },
+      {
+        title: "Prisma",
+        hash: "#Prisma",
+        icon: [prismaIcon, prismaIconWhite],
+        color: ["#336791"],
+      },
     ],
   },
 ] as const;
 
 export const skillsDataDesign = [
   {
-    skillsTitle: "Design",
+    skillsTitle: "{ Design }",
     skills: [
       { title: "Figma", hash: "#Figma", icon: [figmaIcon], color: ["#F24E1E"] },
       {
@@ -314,7 +360,7 @@ export const skillsDataDesign = [
 
 export const skillsDataCMS = [
   {
-    skillsTitle: "CMS",
+    skillsTitle: "{ CMS }",
     skills: [
       {
         title: "WordPress",
