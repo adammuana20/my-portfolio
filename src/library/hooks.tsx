@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import type { SectionName } from "./types";
 
-export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
+export function useSectionInView(sectionName: SectionName, threshold = 0.4) {
   const isMobile = window.innerWidth <= 1024;
   const { ref, inView } = useInView({
     threshold: isMobile ? 0.1 : threshold,
@@ -24,18 +24,18 @@ export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
 export function useLazyAnimation() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    rootMargin: '-100px 0px',
+    rootMargin: "-100px 0px",
   });
 
   return {
     ref,
-    inView
-  }
+    inView,
+  };
 }
 
 export function useScreenSize() {
   const [isMobile, setIsMobile] = useState(false);
-  const [isSticky, setIsSticky] = useState(false)
+  const [isSticky, setIsSticky] = useState(false);
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
   useEffect(() => {
@@ -69,6 +69,6 @@ export function useScreenSize() {
     isSticky,
     setIsSticky,
     isTooltipVisible,
-    setIsTooltipVisible
-  }
+    setIsTooltipVisible,
+  };
 }

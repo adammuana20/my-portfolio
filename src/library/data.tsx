@@ -60,32 +60,32 @@ export const navLinks = [
 export const aboutMe = [
   {
     description:
-      "Hi, I'm Adam Clint P. Muaña, a graduate in Information Technology from FEU Diliman.\n\nPassionate about technology and problem-solving, I've acquired valuable programming and system development skills during my academic journey.\n\nI stay updated on the latest tech trends and am excited about contributing to innovative solutions.",
+      "I’m Adam Clint Muaña, a frontend-focused developer with 5 years of experience working on high-traffic web platforms.\n\nI specialize in building modern, scalable applications using React and Next.js, with strong experience in UI implementation, authentication, and fullstack systems.",
     face: "front",
   },
   {
     description:
-      "I'm a Front End developer from the Philippines.\n\nI create websites with a focus on user experience and responsiveness.\n\nResponsive design ensures your website is accessible to all users, regardless of their devices.",
+      "I also work as a Fullstack developer, building end-to-end applications using modern tools like Next.js, Node.js, and databases such as PostgreSQL and MongoDB.\n\nI enjoy working on features like authentication, APIs, and payment integrations.",
     face: "right",
   },
   {
     description:
-      "I've freelanced for over a year in web development, specializing in crafting WordPress websites.\n\nI'm skilled in customizing themes, integrating plugins, and turning PSD designs into HTML.\n\nExcited to tackle new challenges and bring my expertise to your projects!",
+      "Outside of work, I enjoy playing basketball, online games, and badminton with my daughter.\n\nThese activities help me stay active, improve focus, and maintain a healthy work-life balance, which allows me to stay productive and consistent in my development work.",
     face: "back",
   },
   {
     description:
-      "When I'm not coding, you can usually find me unwinding with online games.\n\nI enjoy the intensity of FPS games, the strategy in Dota 2, and the immersive worlds of MMORPGs. Gaming not only gives me a break from coding but also inspires creativity.\n\nLet's connect over our shared interests in technology and gaming!",
+      "I’m a Frontend developer from the Philippines, passionate about creating responsive, user-friendly interfaces.\n\nI focus on clean design, performance, and delivering seamless user experiences across devices and browsers.",
     face: "left",
   },
   {
     description:
-      "I'm a CMS Developer passionate about my work at BetMGM, one of the largest gambling companies in the US.\n\nMy focus includes creating engaging promotion pages and building custom pages from the ground up.\n\nI take pride in ensuring the quality of my work, collaborating with teammates, and conducting thorough cross-browser checks for a seamless user experience.",
+      "I’m committed to continuous learning and staying up to date with modern web technologies.\n\nI actively build real-world projects to improve my skills in frontend and fullstack development, focusing on writing clean, maintainable code and following best practices used in production environments.",
     face: "top",
   },
   {
     description:
-      "I proudly own Perhaps Manila, a clothing brand in the Philippines that stands for style, comfort, and individuality.\n\nAs the creative force behind the brand, I manage everything from design concepts to maintaining our website.\n\nCreating a smooth online experience for our customers isn't just a job; it's my passion.",
+      "My goal is to grow into a highly skilled frontend/fullstack developer and contribute to building scalable, impactful applications.\n\nI’m actively seeking opportunities where I can apply my skills, learn from experienced teams, and deliver meaningful solutions to real-world problems.",
     face: "bottom",
   },
 ] as const;

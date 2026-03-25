@@ -65,3 +65,7 @@
 .cube-wrapper .cube .cube-face.bottom {
   transform: rotateX(-90deg) translateZ(calc(var(--size) / 2));
 }
+
+.face h3 {
+  margin-block: 3rem !important;
+}

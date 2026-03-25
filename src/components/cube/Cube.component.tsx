@@ -1,6 +1,7 @@
-import React, { useState, useEffect, FC } from 'react';
-import { animated, useSpring } from '@react-spring/web'
-import './Cube.styles.scss'
+import React, { useState, useEffect, FC } from "react";
+import { animated, useSpring } from "@react-spring/web";
+
+import "./Cube.styles.scss";
 
 type Face = {
   translate: {
@@ -15,21 +16,21 @@ type Face = {
     deg: number;
   };
 };
-  
+
 type Faces = {
-    [key: string]: Face;
+  [key: string]: Face;
 };
 
 type CubeProps = {
-    index: string,
-    size: number,
-    children: React.ReactNode[]
-}
+  index: string;
+  size: number;
+  children: React.ReactNode[];
+};
 
 const emptyFace = <div className={`empty`}>empty</div>;
 
-const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
-  const faceSize = size / 2;  
+const Cube: FC<CubeProps> = ({ index = "front", size = 200, children }) => {
+  const faceSize = size / 2;
 
   const [isMoved, setIsMoved] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
@@ -41,15 +42,33 @@ const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
     translate: { x: 0, y: 0, z: -faceSize },
     rotateX: 0,
     rotateY: 0,
-    rotateZ: 0
+    rotateZ: 0,
   });
   const [faces, setFaces] = useState<Faces>({
-    front: { translate: { x: 0, y: 0, z: faceSize }, rotate: { x: 0, y: 1, z: 0, deg: 0 } },
-    right: { translate: { x: faceSize, y: 0, z: 0 }, rotate: { x: 0, y: 1, z: 0, deg: 90 } },
-    back: { translate: { x: 0, y: 0, z: -faceSize }, rotate: { x: 0, y: 1, z: 0, deg: 180 } },
-    left: { translate: { x: -faceSize, y: 0, z: 0 }, rotate: { x: 0, y: 1, z: 0, deg: -90 } },
-    top: { translate: { x: 0, y: -faceSize, z: 0 }, rotate: { x: 1, y: 0, z: 0, deg: 90 } },
-    bottom: { translate: { x: 0, y: faceSize, z: 0 }, rotate: { x: 1, y: 0, z: 0, deg: -90 } },
+    front: {
+      translate: { x: 0, y: 0, z: faceSize },
+      rotate: { x: 0, y: 1, z: 0, deg: 0 },
+    },
+    right: {
+      translate: { x: faceSize, y: 0, z: 0 },
+      rotate: { x: 0, y: 1, z: 0, deg: 90 },
+    },
+    back: {
+      translate: { x: 0, y: 0, z: -faceSize },
+      rotate: { x: 0, y: 1, z: 0, deg: 180 },
+    },
+    left: {
+      translate: { x: -faceSize, y: 0, z: 0 },
+      rotate: { x: 0, y: 1, z: 0, deg: -90 },
+    },
+    top: {
+      translate: { x: 0, y: -faceSize, z: 0 },
+      rotate: { x: 1, y: 0, z: 0, deg: 90 },
+    },
+    bottom: {
+      translate: { x: 0, y: faceSize, z: 0 },
+      rotate: { x: 1, y: 0, z: 0, deg: -90 },
+    },
   });
 
   useEffect(() => {
@@ -62,7 +81,7 @@ const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
         ...prevCube,
         rotateX: rotate.x ? -rotate.deg + -13 : -13,
         rotateY: rotate.y ? -rotate.deg + -13 : 0,
-        rotateZ: !rotate.y ? rotate.deg > 0 ? -13 : 13 : 0,
+        rotateZ: !rotate.y ? (rotate.deg > 0 ? -13 : 13) : 0,
       }));
     }
   }, [faces, index, isMoved, isPressed]);
@@ -79,14 +98,31 @@ const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
 
     setFaces((prevFaces) => ({
       ...prevFaces,
-      front: { ...prevFaces.front, translate: { ...prevFaces.front.translate, z: newFaceSize } },
-      right: { ...prevFaces.right, translate: { ...prevFaces.right.translate, x: newFaceSize } },
-      back: { ...prevFaces.back, translate: { ...prevFaces.back.translate, z: -newFaceSize } },
-      left: { ...prevFaces.left, translate: { ...prevFaces.left.translate, x: -newFaceSize } },
-      top: { ...prevFaces.top, translate: { ...prevFaces.top.translate, y: -newFaceSize } },
-      bottom: { ...prevFaces.bottom, translate: { ...prevFaces.bottom.translate, y: newFaceSize } },
+      front: {
+        ...prevFaces.front,
+        translate: { ...prevFaces.front.translate, z: newFaceSize },
+      },
+      right: {
+        ...prevFaces.right,
+        translate: { ...prevFaces.right.translate, x: newFaceSize },
+      },
+      back: {
+        ...prevFaces.back,
+        translate: { ...prevFaces.back.translate, z: -newFaceSize },
+      },
+      left: {
+        ...prevFaces.left,
+        translate: { ...prevFaces.left.translate, x: -newFaceSize },
+      },
+      top: {
+        ...prevFaces.top,
+        translate: { ...prevFaces.top.translate, y: -newFaceSize },
+      },
+      bottom: {
+        ...prevFaces.bottom,
+        translate: { ...prevFaces.bottom.translate, y: newFaceSize },
+      },
     }));
-    
   }, [size]);
 
   const [cubeChildren, setCubeChildren] = useState<React.ReactNode[]>([]);
@@ -173,59 +209,58 @@ const Cube: FC<CubeProps> = ({ index = 'front', size = 200, children }) => {
 
   const styles = useSpring({
     transform: `translate3d(${cube.translate.x}px, ${cube.translate.y}px, ${cube.translate.z}px) rotateX(${cube.rotateX}deg) rotateY(${cube.rotateY}deg) rotateZ(${cube.rotateZ}deg)`,
-    config: { tension: 100, friction: size > 400 ? 50 : 60 }
-  })
-  
-  
+    config: { tension: 100, friction: size > 400 ? 50 : 60 },
+  });
+
   return (
     <div className={`cube-wrapper`}>
-          <animated.div
-            className={`cube`}
-            style={{
-              ...styles
-            }}
-          >
-            {Object.keys(faces).map((face, key) => {
-              const { translate, rotate } = faces[face];
+      <animated.div
+        className={`cube`}
+        style={{
+          ...styles,
+        }}
+      >
+        {Object.keys(faces).map((face, key) => {
+          const { translate, rotate } = faces[face];
 
-              return (
-                <div
-                  className={`cube-face ${face}`}
-                  key={key}
-                  style={{
-                    transform: `translate3d(${translate.x}px, ${translate.y}px, ${translate.z}px) rotate3d(${rotate.x}, ${rotate.y}, ${rotate.z}, ${rotate.deg}deg)`,
-                    width: cube.width,
-                    height: cube.height,
-                  }}
-                  onMouseDown={(e) => {
-                    handleMouseDown(e);
-                  }}
-                  onMouseMove={(e) => {
-                    handleMouseMove(e);
-                  }}
-                  onMouseLeave={() => {
-                    handleMouseUp();
-                  }}
-                  onMouseUp={() => {
-                    handleMouseUp();
-                  }}
-                  onTouchStart={(e) => {
-                    handleTouchStart(e)
-                  }}
-                  onTouchMove={(e) => {
-                    handleTouchMove(e)
-                  }}
-                  onTouchEnd={() => {
-                    handleTouchEnd()
-                  }}
-                >
-                  {cubeChildren[key]}
-                </div>
-              );
-            })}
-          </animated.div>
+          return (
+            <div
+              className={`cube-face ${face}`}
+              key={key}
+              style={{
+                transform: `translate3d(${translate.x}px, ${translate.y}px, ${translate.z}px) rotate3d(${rotate.x}, ${rotate.y}, ${rotate.z}, ${rotate.deg}deg)`,
+                width: cube.width,
+                height: cube.height,
+              }}
+              onMouseDown={(e) => {
+                handleMouseDown(e);
+              }}
+              onMouseMove={(e) => {
+                handleMouseMove(e);
+              }}
+              onMouseLeave={() => {
+                handleMouseUp();
+              }}
+              onMouseUp={() => {
+                handleMouseUp();
+              }}
+              onTouchStart={(e) => {
+                handleTouchStart(e);
+              }}
+              onTouchMove={(e) => {
+                handleTouchMove(e);
+              }}
+              onTouchEnd={() => {
+                handleTouchEnd();
+              }}
+            >
+              {cubeChildren[key]}
+            </div>
+          );
+        })}
+      </animated.div>
     </div>
   );
 };
 
-export default Cube
+export default Cube;
