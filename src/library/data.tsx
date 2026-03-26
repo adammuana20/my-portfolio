@@ -41,7 +41,7 @@ import cloudinaryIcon from "../assets/icons/cloudinaryicon.svg";
 import uploadthingIcon from "../assets/icons/uploadthingicon.svg";
 
 import perhapsManila from "../assets/images/prhps-mnl.jpg";
-import vanlife from "../assets/images/vanlife.jpg";
+// import vanlife from "../assets/images/vanlife.jpg";
 import jobifyImg from "../assets/images/jobify.png";
 import dentistApp from "../assets/images/dentist-app.png";
 import prostore from "../assets/images/prostore.png";
