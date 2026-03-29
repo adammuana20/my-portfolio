@@ -73,20 +73,24 @@ const Projects = () => {
                     </div>
                   </div>
                   <div className="buttons-container">
-                    <Button
-                      label="Live Demo"
-                      link={project.deploymenturl}
-                      iconSVG={project.deploymenticon}
-                      buttoncolor={project.colors.main}
-                      iconcolor={project.colors.icon}
-                    />
-                    {/* <Button
-                      label="Github Repository"
-                      link={project.githuburl}
-                      iconSVG={project.githubicon}
-                      buttoncolor={project.colors.main}
-                      iconcolor={project.colors.icon}
-                    /> */}
+                    {project.githuburl && project.deploymenturl && (
+                      <>
+                        <Button
+                          label="Live Demo"
+                          link={project.deploymenturl}
+                          iconSVG={project.deploymenticon}
+                          buttoncolor={project.colors.main}
+                          iconcolor={project.colors.icon}
+                        />
+                        <Button
+                          label="Github Repository"
+                          link={project.githuburl}
+                          iconSVG={project.githubicon}
+                          buttoncolor={project.colors.main}
+                          iconcolor={project.colors.icon}
+                        />
+                      </>
+                    )}
                   </div>
                 </div>
                 <div className="mockup-container">

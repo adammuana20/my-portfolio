@@ -53,7 +53,7 @@ const Button: React.FC<ButtonProps> = ({
     );
   } else {
     return (
-      <Link to={link || ""}>
+      <Link to={link || ""} target="_blank">
         <button {...commonProps}>
           {IconSVGComponent ? (
             <IconSVGComponent className={"icon-svg"} />

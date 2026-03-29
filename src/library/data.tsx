@@ -109,8 +109,8 @@ export const projectsData = [
     ],
     image: prostore,
     deploymenturl: "https://prostore-iota-five.vercel.app/",
-    // githuburl: "https://github.com/adammuana20/crown-clothing",
-    // githubicon: FiGithub,
+    githuburl: "https://github.com/adammuana20/prostore",
+    githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
       main: "main-btn",
@@ -136,9 +136,9 @@ export const projectsData = [
       { name: "TanStack Query", icon: reactQueryIcon },
     ],
     image: dentistApp,
-    deploymenturl: "https://ak-clinic.netlify.app/auth/signin",
-    // githuburl: "https://github.com/adammuana20/crown-clothing",
-    // githubicon: FiGithub,
+    deploymenturl: "",
+    githuburl: "",
+    githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
       main: "main-btn",
@@ -165,8 +165,8 @@ export const projectsData = [
     ],
     image: jobifyImg,
     deploymenturl: "https://jobify-jf0q.onrender.com/",
-    // githuburl: "https://github.com/adammuana20/crown-clothing",
-    // githubicon: FiGithub,
+    githuburl: "https://github.com/adammuana20/jobify",
+    githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
       main: "main-btn",
@@ -191,8 +191,8 @@ export const projectsData = [
     ],
     image: perhapsManila,
     deploymenturl: "https://perhaps-manila.netlify.app/",
-    // githuburl: "https://github.com/adammuana20/crown-clothing",
-    // githubicon: FiGithub,
+    githuburl: "https://github.com/adammuana20/perhaps-manila",
+    githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
       main: "main-btn",
@@ -201,34 +201,6 @@ export const projectsData = [
       projectcolor: "#70B9BE",
     },
   },
-  // {
-  //   title: "Vanlife",
-  //   description:
-  //     "Global van reservation platform, where adventure knows no bounds! Whether you're a traveler seeking the perfect ride or a van owner looking to share your wheels, we've got you covered. With seamless online reservations and the power of Chart.js for insightful data visualization, embark on your next journey with ease and confidence.",
-  //   technologies: [
-  //     { name: "React", icon: reactIcon },
-  //     { name: "React Router", icon: reactRouter },
-  //     { name: "Chart JS", icon: chartJSIcon },
-  //     { name: "REST Api", icon: apiIcon },
-  //     { name: "Canva", icon: canvaIcon },
-  //     { name: "Netlify", icon: netlifyIcon },
-  //     { name: "Firebase", icon: firebaseIcon },
-  //     { name: "Tailwind", icon: tailwindcssIcon },
-  //     { name: "Typescript", icon: tsIcon },
-  //     // { name: "Material UI", icon: materialUI },
-  //   ],
-  //   image: vanlife,
-  //   deploymenturl: "https://travel-van.netlify.app/",
-  //   // githuburl: "https://github.com/adammuana20/vanlife",
-  //   // githubicon: FiGithub,
-  //   deploymenticon: FiLink,
-  //   colors: {
-  //     main: "main-btn",
-  //     second: "secondary-btn",
-  //     icon: "white",
-  //     projectcolor: "#70B9BE",
-  //   },
-  // },
 ] as const;
 
 export const FooterLinks = [
